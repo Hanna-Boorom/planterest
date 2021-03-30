@@ -16,7 +16,7 @@ Planterest will be fully responsive on both desktop and mobile and be both beaut
 
 ### Goals
 
-- User can view posts on homepage without being logged in
+- User can view only a select few posts on homepage without being logged in
 - When logged in, User will be able to create board(s) and add posts to the board(s)
 - User can view, add, edit, or delete boards and/or posts
 - App will be fully responsive on both desktop and mobile
