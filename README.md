@@ -25,12 +25,14 @@ Planterest will be fully responsive on both desktop and mobile and be both beaut
 ### Libraries and Dependencies
 
 
-|     Library      | Description                                                                   |
-| :--------------: | :---------------------------------------------------------------------------- |
-|      React       | A frontend component library used to render the client-facing side of the app |
-|   React Router   | Allows for easy routing in React                                              |
-|      Axios       | Used to make HTTP requests from the browser                                   |
-|      Rails       | Used in conjunction with Ruby to create a server-side application             |
+|     Library      | Description                                                                    |
+| :--------------: | :----------------------------------------------------------------------------  |
+|      React        | A frontend component library used to render the client-facing side of the app |
+|   React Router Dom   | Allows for easy routing in React                                           |
+|      Axios       | Used to make HTTP requests from the browser                                    |
+|      Rails       | Used in conjunction with Ruby to create a server-side application              |
+|      Bcrypt      | Used to enable encryption easily                                               |
+|       JWT        | Uses Json Web Token (JWT) for token based authentication                       |
 
 
 <br>
@@ -66,25 +68,29 @@ Planterest will be fully responsive on both desktop and mobile and be both beaut
 - Mobile Resource Index
 
 #### Component Tree
-
-> Use this section to display the structure of how your React components are being rendered. This should show the parent to child relation between you components. In other words, show which components are rendering the other components. Include a link to your component tree
-
-[Component Tree Sample](https://gist.git.generalassemb.ly/davidtwhitlatch/414107e2560ae0bb65e233570f2fe056#file-component-tree-png)
+![Component Tree](https://imgur.com/a/QuRbT2d)
 
 #### Component Architecture
-
-> Use this section to define your React components and the data architecture of your app. This should be a reflection of how you expect your directory/file tree to look like. 
 
 ``` structure
 
 src
-|__ assets/
-      |__ fonts
-      |__ graphics
-      |__ images
-      |__ mockups
+|__ App.js/
 |__ components/
-      |__ Header.jsx
+      |__ shared
+            |__ Layout.jsx  
+|__ screens/
+      |__ Login.jsx
+      |__ Register.jsx
+      |__ Boards.jsx
+      |__ BoardDetail.jsx
+      |__ BoardCreate.jsx
+      |__ BoardEdit.jsx
+      |__ Posts.jsx
+      |__ PostDetail.jsx
+      |__ PostCreate.jsx
+      |__ PostEdit.jsx
+|__ screens/
 |__ services/
 
 ```
