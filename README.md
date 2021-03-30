@@ -1,4 +1,4 @@
-# Planterest
+# Planterest :herb:
 
 
 **Planterest** is a Pinterest-like image board app for plant lovers! A full-stack, full CRUD web application built with a Ruby on Rails backend and a React frontend. Planterest is my final project as a student of the General Assembly (GA) Software Engineering Immersive course. This app represents the culmination of all the skills I've learned during my time at GA. 
