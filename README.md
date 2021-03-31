@@ -51,7 +51,7 @@ Planterest will be fully responsive on both desktop and mobile and be both beaut
 
 <details><summary>Login</summary>
       
-![Dummy Link](url)
+![Login](url)
 
 </details>
 
