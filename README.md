@@ -63,6 +63,30 @@ Planterest will be fully responsive on both desktop and mobile and be both beaut
 
 <details><summary>Boards</summary>
       
+![Boards](https://github.com/Hanna-Boorom/planterest/blob/main/Boards%20Wireframes.png)
+
+</details>
+
+<details><summary>BoardDetail</summary>
+      
+![Dummy Link](url)
+
+</details>
+
+<details><summary>BoardEdit</summary>
+      
+![Dummy Link](url)
+
+</details>
+
+<details><summary>BoardCreate</summary>
+      
+![Dummy Link](url)
+
+</details>
+
+<details><summary>BoardCreate</summary>
+      
 ![Dummy Link](url)
 
 </details>
@@ -72,6 +96,27 @@ Planterest will be fully responsive on both desktop and mobile and be both beaut
 ![Dummy Link](url)
 
 </details>
+
+<details><summary>PostDetail</summary>
+      
+![Dummy Link](url)
+
+</details>
+
+<details><summary>PostEdit</summary>
+      
+![Dummy Link](url)
+
+</details>
+
+<details><summary>PostCreate</summary>
+      
+![Dummy Link](url)
+
+</details>
+
+
+
 
 
 
