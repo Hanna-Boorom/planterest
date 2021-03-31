@@ -78,7 +78,7 @@ Planterest will be fully responsive on both desktop and mobile and be both beaut
 
 <details><summary>BoardEdit</summary>
       
-![Dummy Link](url)
+![BoardEdit](https://github.com/Hanna-Boorom/planterest/blob/main/BoardEdit%20Wireframes.png)
 
 </details>
 
