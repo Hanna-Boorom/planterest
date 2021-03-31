@@ -43,7 +43,7 @@ Planterest will be fully responsive on both desktop and mobile and be both beaut
 
 > Use the Wireframes section to display desktop, tablet and mobile views. No hand-drawn wireframes. Use a tool like wireframe.cc, Whimsical or AdobeXD
 
-![Dummy Link](url)
+![Landing](https://xd.adobe.com/view/77a47322-62ef-47ac-a15e-d7f38e4929d9-22f7/?fullscreen)
 
 - Desktop Landing
 
@@ -68,7 +68,7 @@ Planterest will be fully responsive on both desktop and mobile and be both beaut
 - Mobile Resource Index
 
 #### Component Tree
-![Component Tree](https://imgur.com/a/QuRbT2d)
+![Component Tree](https://github.com/Hanna-Boorom/planterest/blob/main/Component%20Tree.png)
 
 #### Component Architecture
 
