@@ -91,13 +91,6 @@ Planterest will be fully responsive on both desktop and mobile and be both beaut
 
 
 
-<details><summary>Posts</summary>
-      
-![Dummy Link](url)
-
-</details>
-
-
 <details><summary>PostDetail</summary>
       
 ![Dummy Link](url)
@@ -143,7 +136,6 @@ src
       |__ BoardDetail.jsx
       |__ BoardCreate.jsx
       |__ BoardEdit.jsx
-      |__ Posts.jsx
       |__ PostDetail.jsx
       |__ PostCreate.jsx
       |__ PostEdit.jsx
