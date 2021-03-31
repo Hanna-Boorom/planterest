@@ -8,7 +8,7 @@
 
 ## MVP
 
-Once MVP is met, users will be able to view posts, but won't be able to add their own posts or boards. Conversely, when logged in, users will be able to view their own boards and posts as well as add, edit, and delete both boards and posts.
+Once MVP is met, when logged in, users will be able to view their own boards and posts as well as add, edit, and delete both boards and posts.
 
 Planterest will be fully responsive on both desktop and mobile and be both beautiful and easy to use. 
 
@@ -16,7 +16,7 @@ Planterest will be fully responsive on both desktop and mobile and be both beaut
 
 ### Goals
 
-- User can view only a select few posts on homepage without being logged in
+- User will be able to successfully create and account and log in
 - When logged in, User will be able to create board(s) and add posts to the board(s)
 - User can view, add, edit, or delete boards and/or posts
 - App will be fully responsive on both desktop and mobile
@@ -55,17 +55,20 @@ Planterest will be fully responsive on both desktop and mobile and be both beaut
 
 </details>
 
+
 <details><summary>Register</summary>
       
 ![Register](https://github.com/Hanna-Boorom/planterest/blob/main/Register%20Wireframes.png)
 
 </details>
 
+
 <details><summary>Boards</summary>
       
 ![Boards](https://github.com/Hanna-Boorom/planterest/blob/main/Boards%20Wireframes.png)
 
 </details>
+
 
 <details><summary>BoardDetail</summary>
       
@@ -79,17 +82,20 @@ Planterest will be fully responsive on both desktop and mobile and be both beaut
 
 </details>
 
-<details><summary>BoardCreate</summary>
-      
-![Dummy Link](url)
-
-</details>
 
 <details><summary>BoardCreate</summary>
       
 ![Dummy Link](url)
 
 </details>
+
+
+<details><summary>BoardCreate</summary>
+      
+![Dummy Link](url)
+
+</details>
+
 
 <details><summary>Posts</summary>
       
@@ -97,17 +103,20 @@ Planterest will be fully responsive on both desktop and mobile and be both beaut
 
 </details>
 
+
 <details><summary>PostDetail</summary>
       
 ![Dummy Link](url)
 
 </details>
 
+
 <details><summary>PostEdit</summary>
       
 ![Dummy Link](url)
 
 </details>
+
 
 <details><summary>PostCreate</summary>
       
