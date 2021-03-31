@@ -57,7 +57,7 @@ Planterest will be fully responsive on both desktop and mobile and be both beaut
 
 <details><summary>Register</summary>
       
-![Dummy Link](url)
+![Register](https://github.com/Hanna-Boorom/planterest/blob/main/Register%20Wireframes.png)
 
 </details>
 
@@ -124,7 +124,7 @@ src
 
 > Use this section to display an image of a computer generated ERD model. You can use draw.io, Lucidchart or another ERD tool.
 
-[ERD Sample](https://drive.google.com/file/d/1kLyQTZqfcA4jjKWQexfEkG2UspyclK8Q/view)
+[Planterest ERD](https://drive.google.com/file/d/1kLyQTZqfcA4jjKWQexfEkG2UspyclK8Q/view)
 <br>
 
 ***
