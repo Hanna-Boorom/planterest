@@ -189,7 +189,7 @@ src
 
 <details><summary>ERD</summary>
       
-![Planterest ERD](https://github.com/Hanna-Boorom/planterest/blob/main/Planterest%20ERD.png)
+![Planterest ERD](https://github.com/Hanna-Boorom/planterest/blob/main/Planterest%20ERD1.png)
 
 
 </details>
