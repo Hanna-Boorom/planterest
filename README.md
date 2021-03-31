@@ -22,6 +22,11 @@ Planterest will be fully responsive on both desktop and mobile and be both beaut
 - App will be fully responsive on both desktop and mobile
 <br>
 
+### Challengers
+
+This will be the largest app I've made on my own, so I'm a bit intimidated going into the project. I think my biggest challenge will be getting everything done and looking the way I want it to within the week timeframe. 
+<br>
+
 ### Libraries and Dependencies
 
 
@@ -107,7 +112,7 @@ Planterest will be fully responsive on both desktop and mobile and be both beaut
 
 <details><summary>PostCreate</summary>
       
-![Dummy Link](url)
+![PostCreate](https://github.com/Hanna-Boorom/planterest/blob/main/PostCreate%20Wireframes.png)
 
 </details>
 
@@ -150,11 +155,29 @@ src
 #### Time Estimates
 
 
-| Task                | Priority | Estimated Time | Time Invested | Actual Time |
-| ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Add Contact Form    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
+| Task                      | Priority | Estimated Time | Time Invested | Actual Time |
+| ------------------------  | :------: | :------------: | :-----------: | :---------: |
+| Backend                   |          |                |               |             |
+| Create Rails Database     |    H     |     .5 hrs     |      TBD      |     TBD     |
+| Scaffold Tables           |    H     |     .5 hrs     |      TBD      |     TBD     |
+| Create Associations       |    H     |      1 hrs     |      TBD      |     TBD     |
+| Set Up Auth               |    H     |      1 hrs     |      TBD      |     TBD     |
+| Create Validations        |    H     |      1 hrs     |      TBD      |     TBD     |
+| Configure Controllers     |    H     |      1 hrs     |      TBD      |     TBD     |
+| Set Up Routes             |    H     |      1 hrs     |      TBD      |     TBD     |
+| Rails Testing             |    H     |      2 hrs     |      TBD      |     TBD     |
+| Frontend                  |          |                |               |             |
+| Create React App          |    H     |     .5 hrs     |      TBD      |     TBD     |
+| Clean Up Boilerplate      |    H     |     .5 hrs     |      TBD      |     TBD     |
+| Create Component Skeleton |    H     |     1 hrs      |      TBD      |     TBD     |
+| Set Up Screen Routing     |    H     |     2 hrs      |      TBD      |     TBD     |
+| Set Up Services and Auth  |    H     |     2 hrs      |      TBD      |     TBD     |
+| Basic Styling             |    H     |     2 hrs      |      TBD      |     TBD     |
+| Login/Register Working    |    H     |     2 hrs      |      TBD      |     TBD     |
+| Boards Screens Setup      |    H     |     3 hrs      |      TBD      |     TBD     |
+| Posts Screens Setup       |    H     |     3 hrs      |      TBD      |     TBD     |
+| Clean Up Styling          |    L     |     4 hrs      |      TBD      |     TBD     |
+| TOTAL                     |          |     28 hrs     |      TBD      |     TBD     |
 
 
 <br>
@@ -175,7 +198,9 @@ src
 
 ## Post-MVP
 
-> Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
+- Add animation to landing page (scrolling pictures)
+- Users will be able to view other users' boards
+- Advanced user interaction CSS (page load animations, hover shadows...etc)
 
 ***
 
