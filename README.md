@@ -93,7 +93,7 @@ Planterest will be fully responsive on both desktop and mobile and be both beaut
 
 <details><summary>PostDetail</summary>
       
-![Dummy Link](url)
+![PostDetail](https://github.com/Hanna-Boorom/planterest/blob/main/PostDetail%20Wireframes.png)
 
 </details>
 
