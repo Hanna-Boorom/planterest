@@ -22,10 +22,11 @@ Planterest will be fully responsive on both desktop and mobile and be both beaut
 - App will be fully responsive on both desktop and mobile
 <br>
 
-### Challengers
+### Challenges
 
 This will be the largest app I've made on my own, so I'm a bit intimidated going into the project. I think my biggest challenge will be getting everything done and looking the way I want it to within the week timeframe. 
 <br>
+
 
 ### Libraries and Dependencies
 
