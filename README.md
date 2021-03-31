@@ -90,12 +90,6 @@ Planterest will be fully responsive on both desktop and mobile and be both beaut
 </details>
 
 
-<details><summary>BoardCreate</summary>
-      
-![Dummy Link](url)
-
-</details>
-
 
 <details><summary>Posts</summary>
       
