@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
-export default function Boards() {
+export default function Boards(props) {
+  const { boards, handleDelete, currentUser } = props;
   return (
     <div>
-      <p>Board 1 will go here</p>
-      <p>Board 2 will go here</p>
-      <p>Board 3 will go here</p>
+      <h3>Boards</h3>
+      {boards.map((board) => (
+        <div>
+          <Link to={`/boards/${board.id}`}>{board.name}</Link>
+        </div>
+      ))}
     </div>
   );
 }
