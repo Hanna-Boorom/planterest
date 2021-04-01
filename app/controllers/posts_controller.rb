@@ -8,7 +8,7 @@ class PostsController < ApplicationController
     # render json: @posts
 
     @board = Board.find(params[:board_id])
-    @posts = Post.where(:board_id: @board.id)
+    @posts = Post.where(board_id: @board.id)
 
     render json: @posts, include: {board: {include: :user}}, status: :ok
   end
