@@ -5,6 +5,7 @@ import { Switch, Route, useHistory } from "react-router-dom";
 import Layout from "../components/shared/Layout/Layout";
 import Boards from "../screens/Boards/Boards";
 import BoardCreate from "../screens/BoardCreate/BoardCreate";
+import BoardDetail from "../screens/BoardDetail/BoardDetail";
 
 // services imports
 import {
@@ -33,6 +34,7 @@ export default function MainContainer(props) {
     const fetchBoards = async () => {
       const boardData = await getAllBoards();
       setBoards(boardData);
+      console.log(boardData);
     };
     fetchBoards();
   }, []);
@@ -49,6 +51,9 @@ export default function MainContainer(props) {
         <Switch>
           <Route path="/boards/create">
             <BoardCreate handleBoardCreate={handleBoardCreate} />
+          </Route>
+          <Route path="/boards/:id">
+            <BoardDetail posts={posts} />
           </Route>
           <Route path="/boards">
             <Boards boards={boards} />

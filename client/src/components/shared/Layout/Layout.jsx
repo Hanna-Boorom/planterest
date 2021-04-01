@@ -4,7 +4,9 @@ export default function Layout(props) {
   return (
     <div>
       <header>Header here</header>
-      <nav></nav>
+      <nav>
+        <p></p>
+      </nav>
       {props.children}
     </div>
   );
