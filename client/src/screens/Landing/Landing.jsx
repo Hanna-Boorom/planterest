@@ -10,7 +10,9 @@ export default function Landing(props) {
       </h3>
       <h4>Come on in, the air is fresh in here!</h4>
       <div>
-        <p>Sign Up to start creating</p>
+        <Link to="/register">
+          <p>Sign Up to start creating</p>
+        </Link>
       </div>
       <div>
         <p>Already have an account?</p>
