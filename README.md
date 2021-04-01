@@ -124,7 +124,7 @@ This will be the largest app I've made on my own, so I'm a bit intimidated going
 
 
 #### Component Tree
-![Component Tree](https://github.com/Hanna-Boorom/planterest/blob/main/Component%20Tree.png)
+![Component Tree](https://github.com/Hanna-Boorom/planterest/blob/main/README-images/Component%20Tree.png)
 
 #### Component Architecture
 
@@ -189,7 +189,7 @@ src
 
 <details><summary>ERD</summary>
       
-![Planterest ERD](https://github.com/Hanna-Boorom/planterest/blob/main/Planterest%20ERD1.png)
+![Planterest ERD](https://github.com/Hanna-Boorom/planterest/blob/main/README-images/Planterest%20ERD1.png)
 
 
 </details>
