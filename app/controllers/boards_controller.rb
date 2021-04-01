@@ -4,13 +4,13 @@ class BoardsController < ApplicationController
 
   # GET /boards
   def index
-    # @boards = Board.all
+    @boards = Board.all
 
-    # render json: @boards
+    render json: @boards
 
-    @user = User.find(params:user_id)
-    @boards = Board.where(user_id: @user.id)
-    render json: @boards, include: :user, status: :ok
+    # @user = User.find(params:user_id)
+    # @boards = Board.where(user_id: @user.id)
+    # render json: @boards, include: :user, status: :ok
   end
 
   # GET /boards/1
