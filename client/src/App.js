@@ -6,10 +6,10 @@ import { Switch, Route, useHistory } from "react-router-dom";
 import "./App.css";
 
 // component imports
-// import Layout from './layouts/Layout';
+
 import Login from "./screens/Login/Login";
 import Landing from "./screens/Landing/Landing";
-// import Register from "./screens/Register";
+import Register from "./screens/Register/Register";
 
 // function imports
 import {
@@ -18,6 +18,7 @@ import {
   removeToken,
   verifyUser,
 } from "./services/auth";
+import MainContainer from "./containers/MainContainer";
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
@@ -54,6 +55,12 @@ function App() {
       <Switch>
         <Route path="/login">
           <Login handleLogin={handleLogin} />
+        </Route>
+        <Route path="/register">
+          <Register />
+        </Route>
+        <Route path="/boards">
+          <MainContainer />
         </Route>
         <Route path="/">
           <Landing />
