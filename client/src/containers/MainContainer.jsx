@@ -36,7 +36,6 @@ export default function MainContainer(props) {
     const fetchBoards = async () => {
       const boardData = await getAllBoards();
       setBoards(boardData);
-      console.log(boardData);
     };
     fetchBoards();
   }, []);
@@ -71,11 +70,17 @@ export default function MainContainer(props) {
     setPosts((prevState) => prevState.filter((post) => post.id !== id));
   };
 
+  const handleBoardDelete = async (id) => {
+    await destroyBoard(id);
+    setBoards((prevState) => prevState.filter((board) => board.id !== id));
+    history.push("/boards");
+  };
+
   return (
     <div>
       <Layout currentUser={currentUser}>
         <Switch>
-          <Route path={`/boards/:board_id/posts/:id`}>
+          <Route path={`/boards/:id/posts/:id`}>
             <PostDetail handlePostDelete={handlePostDelete} />
           </Route>
           <Route path="/boards/create">
@@ -85,7 +90,7 @@ export default function MainContainer(props) {
             <BoardEdit boards={boards} handleBoardUpdate={handleBoardUpdate} />
           </Route>
           <Route path="/boards/:id">
-            <BoardDetail />
+            <BoardDetail handleBoardDelete={handleBoardDelete} />
           </Route>
           <Route path="/boards">
             <Boards boards={boards} />

@@ -8,11 +8,13 @@ import { getAllPosts } from "../../services/posts";
 export default function BoardDetail(props) {
   const [currBoard, setCurrBoard] = useState(null);
   const { id } = useParams();
+  const { handleBoardDelete } = props;
 
   useEffect(() => {
     const fetchCurrBoard = async () => {
       const boardData = await getOneBoard(id);
       setCurrBoard(boardData);
+      console.log(boardData);
     };
     fetchCurrBoard();
   }, [id]);
@@ -38,6 +40,9 @@ export default function BoardDetail(props) {
           <Link to={`/boards/${currBoard.id}/edit`}>
             <button>Edit This Board</button>
           </Link>
+          <button onClick={() => handleBoardDelete(currBoard.id)}>
+            Delete This Board
+          </button>
         </div>
       )}
     </div>
