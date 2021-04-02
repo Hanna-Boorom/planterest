@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+// import TextfField from "@material-ui/core/TextField";
 
 export default function BoardEdit(props) {
   const [formData, setFormData] = useState({
@@ -44,7 +45,15 @@ export default function BoardEdit(props) {
         <h3>Edit this Board</h3>
         <label>
           Title:
-          <input type="text" name="name" value={name} onChange={handleChange} />
+          <input
+            id="filled-basic"
+            label="Filled"
+            variant="filled"
+            name="name"
+            value={name}
+            onChange={handleChange}
+          />
+          {/* <input type="text" name="name" value={name} onChange={handleChange} /> */}
         </label>
 
         <label>
