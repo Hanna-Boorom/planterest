@@ -5,7 +5,9 @@ export default function Layout(props) {
     <div>
       <header>Header here</header>
       <nav>
-        <p></p>
+        <NavLink to="/boards">
+          <p>Boards</p>
+        </NavLink>
       </nav>
       {props.children}
     </div>

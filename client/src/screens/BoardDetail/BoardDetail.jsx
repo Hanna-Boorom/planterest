@@ -8,21 +8,14 @@ import { getAllPosts } from "../../services/posts";
 export default function BoardDetail(props) {
   const [currBoard, setCurrBoard] = useState(null);
   const { id } = useParams();
-  const { boards, posts } = props;
 
   useEffect(() => {
     const fetchCurrBoard = async () => {
       const boardData = await getOneBoard(id);
       setCurrBoard(boardData);
-      console.log(boardData);
     };
     fetchCurrBoard();
   }, [id]);
-
-  // const handleChange = (e) => {
-  //   const { value } = e.target;
-  //   setSelectedFlavor(value)
-  // }
 
   return (
     <div>
@@ -37,10 +30,10 @@ export default function BoardDetail(props) {
             </div>
           ))}
 
-          <Link to="">
+          <Link to="/boards/create">
             <button>Add a Post</button>
           </Link>
-          <Link>
+          <Link to={`/boards/${currBoard.id}/edit`}>
             <button>Edit This Board</button>
           </Link>
         </div>

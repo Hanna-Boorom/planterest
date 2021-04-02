@@ -20,9 +20,10 @@ import {
   getAllBoards,
   getOneBoard,
   addBoard,
-  updateBoard,
+  putBoard,
   destroyBoard,
 } from "../services/boards";
+import BoardEdit from "../screens/BoardEdit/BoardEdit";
 
 export default function MainContainer(props) {
   const [boards, setBoards] = useState([]);
@@ -45,6 +46,16 @@ export default function MainContainer(props) {
     history.push("/boards");
   };
 
+  const handleBoardUpdate = async (id, boardData) => {
+    const updatedBoard = await putBoard(id, boardData);
+    setBoards((prevState) =>
+      prevState.map((board) => {
+        return board.id === Number(id) ? updatedBoard : board;
+      })
+    );
+    history.push("/boards");
+  };
+
   return (
     <div>
       <Layout currentUser={currentUser}>
@@ -52,8 +63,11 @@ export default function MainContainer(props) {
           <Route path="/boards/create">
             <BoardCreate handleBoardCreate={handleBoardCreate} />
           </Route>
+          <Route path="/boards/:id/edit">
+            <BoardEdit boards={boards} handleBoardUpdate={handleBoardUpdate} />
+          </Route>
           <Route path="/boards/:id">
-            <BoardDetail posts={posts} />
+            <BoardDetail />
           </Route>
           <Route path="/boards">
             <Boards boards={boards} />
