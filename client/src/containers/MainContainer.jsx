@@ -81,7 +81,7 @@ export default function MainContainer(props) {
       <Layout currentUser={currentUser}>
         <Switch>
           <Route path={`/boards/:id/posts/:id`}>
-            <PostDetail handlePostDelete={handlePostDelete} />
+            <PostDetail boards={boards} handlePostDelete={handlePostDelete} />
           </Route>
           <Route path="/boards/create">
             <BoardCreate handleBoardCreate={handleBoardCreate} />
