@@ -21,10 +21,12 @@ class PostsController < ApplicationController
   # POST /posts
   def create
     @post = Post.new(post_params)
-    @post.user = current_user
+    @board = Board.find(params[:board_id])
+    @post.board = @board
+    # @post.user = @current_user
 
     if @post.save
-      render json: @post, status: :created, location: @post
+      render json: @post, status: :created
     else
       render json: @post.errors, status: :unprocessable_entity
     end
@@ -42,6 +44,7 @@ class PostsController < ApplicationController
   # DELETE /posts/1
   def destroy
     @post.destroy
+    render json: @post.errors, status: :ok
   end
 
   private
