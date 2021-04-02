@@ -8,11 +8,13 @@ import { getAllPosts } from "../../services/posts";
 export default function BoardDetail(props) {
   const [currBoard, setCurrBoard] = useState(null);
   const { id } = useParams();
+  const { handleBoardDelete } = props;
 
   useEffect(() => {
     const fetchCurrBoard = async () => {
       const boardData = await getOneBoard(id);
       setCurrBoard(boardData);
+      console.log(boardData);
     };
     fetchCurrBoard();
   }, [id]);
@@ -25,8 +27,10 @@ export default function BoardDetail(props) {
           <h3>{currBoard.description}</h3>
           {currBoard.posts.map((post) => (
             <div>
-              <img alt="plant" src={post.image_url} />
-              <p>{post.name}</p>
+              <Link to={`/boards/${currBoard.id}/posts/${post.id}`}>
+                <img alt="plant" src={post.image_url} />
+                <p>{post.name}</p>
+              </Link>
             </div>
           ))}
 
@@ -36,6 +40,9 @@ export default function BoardDetail(props) {
           <Link to={`/boards/${currBoard.id}/edit`}>
             <button>Edit This Board</button>
           </Link>
+          <button onClick={() => handleBoardDelete(currBoard.id)}>
+            Delete This Board
+          </button>
         </div>
       )}
     </div>

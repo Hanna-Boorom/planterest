@@ -5,7 +5,9 @@ import { Switch, Route, useHistory } from "react-router-dom";
 import Layout from "../components/shared/Layout/Layout";
 import Boards from "../screens/Boards/Boards";
 import BoardCreate from "../screens/BoardCreate/BoardCreate";
+import BoardEdit from "../screens/BoardEdit/BoardEdit";
 import BoardDetail from "../screens/BoardDetail/BoardDetail";
+import PostDetail from "../screens/PostDetail/PostDetail";
 
 // services imports
 import {
@@ -23,7 +25,6 @@ import {
   putBoard,
   destroyBoard,
 } from "../services/boards";
-import BoardEdit from "../screens/BoardEdit/BoardEdit";
 
 export default function MainContainer(props) {
   const [boards, setBoards] = useState([]);
@@ -35,9 +36,17 @@ export default function MainContainer(props) {
     const fetchBoards = async () => {
       const boardData = await getAllBoards();
       setBoards(boardData);
-      console.log(boardData);
     };
     fetchBoards();
+  }, []);
+
+  useEffect(() => {
+    const fetchPosts = async () => {
+      const postData = await getAllPosts();
+      setPosts(postData);
+      console.log(postData);
+    };
+    fetchPosts();
   }, []);
 
   const handleBoardCreate = async (boardData) => {
@@ -56,10 +65,24 @@ export default function MainContainer(props) {
     history.push("/boards");
   };
 
+  const handlePostDelete = async (id) => {
+    await destroyPost(id);
+    setPosts((prevState) => prevState.filter((post) => post.id !== id));
+  };
+
+  const handleBoardDelete = async (id) => {
+    await destroyBoard(id);
+    setBoards((prevState) => prevState.filter((board) => board.id !== id));
+    history.push("/boards");
+  };
+
   return (
     <div>
       <Layout currentUser={currentUser}>
         <Switch>
+          <Route path={`/boards/:id/posts/:id`}>
+            <PostDetail boards={boards} handlePostDelete={handlePostDelete} />
+          </Route>
           <Route path="/boards/create">
             <BoardCreate handleBoardCreate={handleBoardCreate} />
           </Route>
@@ -67,7 +90,7 @@ export default function MainContainer(props) {
             <BoardEdit boards={boards} handleBoardUpdate={handleBoardUpdate} />
           </Route>
           <Route path="/boards/:id">
-            <BoardDetail />
+            <BoardDetail handleBoardDelete={handleBoardDelete} />
           </Route>
           <Route path="/boards">
             <Boards boards={boards} />

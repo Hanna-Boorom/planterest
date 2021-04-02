@@ -7,6 +7,7 @@ export const getAllPosts = async (boardId) => {
 
 export const getOnePost = async (boardId, id) => {
   const resp = await api.get(`boards/${boardId}/posts/${id}`);
+  return resp.data;
 };
 
 export const addPost = async (boardId, id) => {
