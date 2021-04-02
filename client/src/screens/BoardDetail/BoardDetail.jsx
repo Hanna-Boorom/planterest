@@ -25,8 +25,10 @@ export default function BoardDetail(props) {
           <h3>{currBoard.description}</h3>
           {currBoard.posts.map((post) => (
             <div>
-              <img alt="plant" src={post.image_url} />
-              <p>{post.name}</p>
+              <Link to={`/boards/${currBoard.id}/posts/${post.id}`}>
+                <img alt="plant" src={post.image_url} />
+                <p>{post.name}</p>
+              </Link>
             </div>
           ))}
 
