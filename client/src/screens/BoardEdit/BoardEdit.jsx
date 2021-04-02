@@ -45,15 +45,7 @@ export default function BoardEdit(props) {
         <h3>Edit this Board</h3>
         <label>
           Title:
-          <input
-            id="filled-basic"
-            label="Filled"
-            variant="filled"
-            name="name"
-            value={name}
-            onChange={handleChange}
-          />
-          {/* <input type="text" name="name" value={name} onChange={handleChange} /> */}
+          <input name="name" value={name} onChange={handleChange} />
         </label>
 
         <label>

@@ -15,7 +15,7 @@ export const addPost = async (boardId, id) => {
   return resp.data;
 };
 
-export const updatePost = async (boardId, id) => {
+export const updatePost = async (boardId, id, postData) => {
   const resp = await api.put(`boards/${boardId}/posts/${id}`);
   return resp.data;
 };

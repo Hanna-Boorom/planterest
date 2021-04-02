@@ -12,9 +12,9 @@ import PostDetail from "../screens/PostDetail/PostDetail";
 // services imports
 import {
   getAllPosts,
-  getOnePost,
-  addPost,
-  updatePost,
+  // getOnePost,
+  // addPost,
+  // updatePost,
   destroyPost,
 } from "../services/posts";
 
@@ -65,15 +65,16 @@ export default function MainContainer(props) {
     history.push("/boards");
   };
 
-  const handlePostDelete = async (id) => {
-    await destroyPost(id);
-    setPosts((prevState) => prevState.filter((post) => post.id !== id));
-  };
-
   const handleBoardDelete = async (id) => {
     await destroyBoard(id);
     setBoards((prevState) => prevState.filter((board) => board.id !== id));
     history.push("/boards");
+  };
+
+  const handlePostDelete = async (boardId, id) => {
+    await destroyPost(boardId, id);
+    setPosts((prevState) => prevState.filter((post) => post.id !== id));
+    history.push(`/boards/${boardId}`);
   };
 
   return (
@@ -83,7 +84,7 @@ export default function MainContainer(props) {
           <Route path="/boards/:id/posts/:id">
             <PostDetail
               boards={boards}
-              posts={posts}
+              // posts={posts}
               handlePostDelete={handlePostDelete}
             />
           </Route>

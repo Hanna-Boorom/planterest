@@ -24,10 +24,11 @@ export default function PostDetail(props) {
           <h5>{currPost.description}</h5>
           <img src={currPost.image_url} alt="post cover" />
           <div>
-            <Link to={`/boards/${currPost.board_id}/posts/${currPost.id}/edit`}>
-              Edit This Post
-            </Link>
-            <button onClick={handlePostDelete}>Delete This Post</button>
+            <button
+              onClick={() => handlePostDelete(currPost.board_id, currPost.id)}
+            >
+              Delete This Post
+            </button>
           </div>
         </div>
       )}

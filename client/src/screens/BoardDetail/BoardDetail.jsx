@@ -3,7 +3,6 @@ import { useParams, Link } from "react-router-dom";
 
 // services imports
 import { getOneBoard } from "../../services/boards";
-import { getAllPosts } from "../../services/posts";
 
 export default function BoardDetail(props) {
   const [currBoard, setCurrBoard] = useState(null);
@@ -26,7 +25,7 @@ export default function BoardDetail(props) {
           <h1>{currBoard.name}</h1>
           <h3>{currBoard.description}</h3>
           {currBoard.posts.map((post) => (
-            <div>
+            <div key={currBoard.id}>
               <Link to={`/boards/${currBoard.id}/posts/${post.id}`}>
                 <img alt="plant" src={post.image_url} />
                 <p>{post.name}</p>
