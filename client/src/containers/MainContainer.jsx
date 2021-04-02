@@ -8,19 +8,13 @@ import BoardCreate from "../screens/BoardCreate/BoardCreate";
 import BoardEdit from "../screens/BoardEdit/BoardEdit";
 import BoardDetail from "../screens/BoardDetail/BoardDetail";
 import PostDetail from "../screens/PostDetail/PostDetail";
+import PostCreate from "../screens/PostCreate/PostCreate";
 
 // services imports
-import {
-  getAllPosts,
-  // getOnePost,
-  // addPost,
-  // updatePost,
-  destroyPost,
-} from "../services/posts";
+import { destroyPost } from "../services/posts";
 
 import {
   getAllBoards,
-  getOneBoard,
   addBoard,
   putBoard,
   destroyBoard,
@@ -39,15 +33,6 @@ export default function MainContainer(props) {
     };
     fetchBoards();
   }, []);
-
-  // useEffect(() => {
-  //   const fetchPosts = async () => {
-  //     const postData = await getAllPosts();
-  //     setPosts(postData);
-  //     console.log(postData);
-  //   };
-  //   fetchPosts();
-  // }, []);
 
   const handleBoardCreate = async (boardData) => {
     const newBoard = await addBoard(boardData);
@@ -71,6 +56,13 @@ export default function MainContainer(props) {
     history.push("/boards");
   };
 
+  // POST API CALLS
+  const handlePostCreate = async (postData) => {
+    const newBoard = await addBoard(postData);
+    setBoards((prevState) => [...prevState, newBoard]);
+    history.push("/boards");
+  };
+
   const handlePostDelete = async (boardId, id) => {
     await destroyPost(boardId, id);
     setPosts((prevState) => prevState.filter((post) => post.id !== id));
@@ -87,6 +79,9 @@ export default function MainContainer(props) {
               // posts={posts}
               handlePostDelete={handlePostDelete}
             />
+          </Route>
+          <Route path="/boards/:id/posts/create">
+            <PostCreate handlePostCreate={handlePostCreate} />
           </Route>
           <Route path="/boards/create">
             <BoardCreate handleBoardCreate={handleBoardCreate} />

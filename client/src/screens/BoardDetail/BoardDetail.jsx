@@ -13,7 +13,6 @@ export default function BoardDetail(props) {
     const fetchCurrBoard = async () => {
       const boardData = await getOneBoard(id);
       setCurrBoard(boardData);
-      console.log(boardData);
     };
     fetchCurrBoard();
   }, [id]);
@@ -33,7 +32,7 @@ export default function BoardDetail(props) {
             </div>
           ))}
 
-          <Link to="/boards/create">
+          <Link to={`/boards/${currBoard.id}/posts/create`}>
             <button>Add a Post</button>
           </Link>
           <Link to={`/boards/${currBoard.id}/edit`}>
