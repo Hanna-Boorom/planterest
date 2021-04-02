@@ -40,14 +40,14 @@ export default function MainContainer(props) {
     fetchBoards();
   }, []);
 
-  useEffect(() => {
-    const fetchPosts = async () => {
-      const postData = await getAllPosts();
-      setPosts(postData);
-      console.log(postData);
-    };
-    fetchPosts();
-  }, []);
+  // useEffect(() => {
+  //   const fetchPosts = async () => {
+  //     const postData = await getAllPosts();
+  //     setPosts(postData);
+  //     console.log(postData);
+  //   };
+  //   fetchPosts();
+  // }, []);
 
   const handleBoardCreate = async (boardData) => {
     const newBoard = await addBoard(boardData);
