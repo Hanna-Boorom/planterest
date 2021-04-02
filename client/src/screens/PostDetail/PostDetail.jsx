@@ -4,23 +4,21 @@ import { getOnePost } from "../../services/posts";
 
 export default function PostDetail(props) {
   const [currPost, setCurrPost] = useState(null);
-  const [boardId, setBoardId] = useState(null);
+  // const [boardId, setBoardId] = useState(null);
   const { id } = useParams();
-  const { boards, handleDeletePost } = props;
+  const { posts, boards, handleDeletePost } = props;
 
-  boards.map((board) => setBoardId(boardId));
-  const params = useParams();
-  console.log(params);
+  // boards.map((board) => setBoardId(boardId));
 
   // currBoard = boards.find((board) => board.id === );
 
   useEffect(() => {
     const fetchCurrPost = async () => {
-      const postData = await getOnePost(Number(id));
+      const postData = await getOnePost(id);
       setCurrPost(postData);
     };
     fetchCurrPost();
-  }, []);
+  }, [id]);
 
   return (
     <div>
