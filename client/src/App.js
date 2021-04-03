@@ -4,6 +4,7 @@ import { Switch, Route, useHistory } from "react-router-dom";
 
 // import styling
 import "./App.css";
+import logo from "./assets/PlanterestLogo.png";
 
 // component imports
 
@@ -48,17 +49,21 @@ function App() {
     setCurrentUser(null);
     localStorage.removeItem("authToken");
     removeToken();
-    history.push("/login");
+    history.push("/landing");
   };
 
   return (
     <div className="App">
       <Switch>
         <Route path="/login">
-          <Login currentUser={currentUser} handleLogin={handleLogin} />
+          <Login
+            currentUser={currentUser}
+            handleLogin={handleLogin}
+            logo={logo}
+          />
         </Route>
         <Route path="/register">
-          <Register handleRegister={handleRegister} />
+          <Register handleRegister={handleRegister} logo={logo} />
         </Route>
         <Route path="/boards">
           <MainContainer
@@ -67,7 +72,7 @@ function App() {
           />
         </Route>
         <Route path="/">
-          <Landing />
+          <Landing logo={logo} />
         </Route>
       </Switch>
     </div>

@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
 
 export default function Landing(props) {
+  const { logo } = props;
   return (
-    <div>
+    <div className="landing-container">
       <h1>Welcome to Planterest! 🌿 </h1>
+      <img src={logo} alt="logo" />
       <h3>
         An image board site for plant-lovers to curate boards with images of
         their favorite flora
