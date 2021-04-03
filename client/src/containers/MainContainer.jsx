@@ -11,7 +11,7 @@ import PostDetail from "../screens/PostDetail/PostDetail";
 import PostCreate from "../screens/PostCreate/PostCreate";
 
 // services imports
-import { destroyPost } from "../services/posts";
+import { addPost, destroyPost } from "../services/posts";
 
 import {
   getAllBoards,
@@ -57,10 +57,10 @@ export default function MainContainer(props) {
   };
 
   // POST API CALLS
-  const handlePostCreate = async (postData) => {
-    const newBoard = await addBoard(postData);
-    setBoards((prevState) => [...prevState, newBoard]);
-    history.push("/boards");
+  const handlePostCreate = async (boardId, postData) => {
+    const newPost = await addPost(boardId, postData);
+    setBoards((prevState) => [...prevState, newPost]);
+    history.push(`/boards/${boardId}/posts/`);
   };
 
   const handlePostDelete = async (boardId, id) => {
@@ -73,6 +73,9 @@ export default function MainContainer(props) {
     <div>
       <Layout currentUser={currentUser}>
         <Switch>
+          <Route path="/boards/:id/posts/create">
+            <PostCreate handlePostCreate={handlePostCreate} />
+          </Route>
           <Route path="/boards/:id/posts/:id">
             <PostDetail
               boards={boards}
@@ -80,9 +83,7 @@ export default function MainContainer(props) {
               handlePostDelete={handlePostDelete}
             />
           </Route>
-          <Route path="/boards/:id/posts/create">
-            <PostCreate handlePostCreate={handlePostCreate} />
-          </Route>
+
           <Route path="/boards/create">
             <BoardCreate handleBoardCreate={handleBoardCreate} />
           </Route>

@@ -13,6 +13,7 @@ export default function BoardDetail(props) {
     const fetchCurrBoard = async () => {
       const boardData = await getOneBoard(id);
       setCurrBoard(boardData);
+      console.log(boardData);
     };
     fetchCurrBoard();
   }, [id]);

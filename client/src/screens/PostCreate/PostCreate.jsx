@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useParams } from "react-router-dom";
 
 export default function PostCreate(props) {
   const [formData, setFormData] = useState({
@@ -9,6 +10,7 @@ export default function PostCreate(props) {
 
   const { name, description, image_url } = formData;
   const { handlePostCreate } = props;
+  const { id } = useParams();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -24,7 +26,8 @@ export default function PostCreate(props) {
       <form
         onSubmit={(e) => {
           e.preventDefault();
-          handlePostCreate(formData);
+          handlePostCreate(id, formData);
+          console.log(formData);
         }}
       >
         <label>
