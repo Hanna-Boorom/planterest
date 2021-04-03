@@ -7,23 +7,26 @@ class PostsController < ApplicationController
     # @posts = Post.all
     # render json: @posts
 
-    # @board = Board.find(params[:board_id])
-    # @posts = Post.where(board_id: @board.id)
+    @board = Board.find(params[:board_id])
+    @posts = Post.where(board_id: @board.id).all
 
-    @posts = Post.find_by(id: params[:board_id])
+    # @posts = Post.find_by(id: params[:board_id])
 
     render json: @posts, include: {board: {include: :user}}, status: :ok
   end
 
   # GET /posts/1
   def show
-    render json: @post
+    
+    render json: @post, include: :board
   end
 
   # POST /posts
   def create
-    @post = Post.new(post_params)
     @board = Board.find(params[:board_id])
+    @post = Post.where(board_id: @board.id).new(post_params)
+    # @post = Post.new(post_params)
+    
     @post.board = @board
     # @post.user = @current_user
 

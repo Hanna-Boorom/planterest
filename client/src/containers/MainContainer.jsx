@@ -10,6 +10,9 @@ import BoardDetail from "../screens/BoardDetail/BoardDetail";
 import PostDetail from "../screens/PostDetail/PostDetail";
 import PostCreate from "../screens/PostCreate/PostCreate";
 
+// logo import
+import logo from "../assets/PlanterestLogo.png";
+
 // services imports
 // import { removeToken } from "../services/auth";
 import { addPost, destroyPost } from "../services/posts";
@@ -80,7 +83,7 @@ export default function MainContainer(props) {
 
   return (
     <div>
-      <Layout currentUser={currentUser} handleLogout={handleLogout}>
+      <Layout currentUser={currentUser} handleLogout={handleLogout} logo={logo}>
         <Switch>
           <Route path="/boards/:id/posts/create">
             <PostCreate handlePostCreate={handlePostCreate} />

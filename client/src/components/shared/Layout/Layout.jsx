@@ -1,4 +1,5 @@
 import { NavLink, Link } from "react-router-dom";
+import logo from "../../../assets/PlanterestLogo.png";
 
 export default function Layout(props) {
   const { currentUser, handleLogout } = props;
@@ -6,7 +7,7 @@ export default function Layout(props) {
     <div>
       <header>
         <NavLink to="/boards">
-          <h1>Planterest</h1>
+          <img src={logo} alt="logo" />
         </NavLink>
         {currentUser ? (
           <>

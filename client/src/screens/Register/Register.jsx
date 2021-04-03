@@ -9,7 +9,7 @@ export default function Register(props) {
     password: "",
   });
   const { username, email, password } = formData;
-  const { handleRegister } = props;
+  const { handleRegister, logo } = props;
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -20,8 +20,9 @@ export default function Register(props) {
   };
 
   return (
-    <div>
+    <div className="register-container">
       <h2>Register</h2>
+      <img src={logo} alt="logo" />
       <form
         onSubmit={(e) => {
           e.preventDefault();

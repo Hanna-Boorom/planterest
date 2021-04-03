@@ -8,7 +8,7 @@ export default function Login(props) {
     password: "",
   });
   const { email, password } = formData;
-  const { handleLogin } = props;
+  const { handleLogin, logo } = props;
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -19,7 +19,7 @@ export default function Login(props) {
   };
 
   return (
-    <div>
+    <div className="login-container">
       <form
         onSubmit={(e) => {
           e.preventDefault();
@@ -27,6 +27,7 @@ export default function Login(props) {
         }}
       >
         <h3>Login</h3>
+        <img src={logo} alt="logo" />
         <label>
           Email:
           <input
