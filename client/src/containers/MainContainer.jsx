@@ -11,6 +11,7 @@ import PostDetail from "../screens/PostDetail/PostDetail";
 import PostCreate from "../screens/PostCreate/PostCreate";
 
 // services imports
+// import { removeToken } from "../services/auth";
 import { addPost, destroyPost } from "../services/posts";
 
 import {
@@ -24,7 +25,7 @@ export default function MainContainer(props) {
   const [boards, setBoards] = useState([]);
   const [posts, setPosts] = useState([]);
   const history = useHistory();
-  const { currentUser } = props;
+  const { currentUser, handleLogout } = props;
 
   useEffect(() => {
     const fetchBoards = async () => {
@@ -34,6 +35,14 @@ export default function MainContainer(props) {
     fetchBoards();
   }, []);
 
+  // LOGOUT
+  // const handleLogout = () => {
+  //   setCurrentUser(null);
+  //   localStorage.removeItem("authToken");
+  //   removeToken();
+  // };
+
+  // BOARD API CALLS
   const handleBoardCreate = async (boardData) => {
     const newBoard = await addBoard(boardData);
     setBoards((prevState) => [...prevState, newBoard]);
@@ -71,7 +80,7 @@ export default function MainContainer(props) {
 
   return (
     <div>
-      <Layout currentUser={currentUser}>
+      <Layout currentUser={currentUser} handleLogout={handleLogout}>
         <Switch>
           <Route path="/boards/:id/posts/create">
             <PostCreate handlePostCreate={handlePostCreate} />

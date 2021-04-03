@@ -48,6 +48,7 @@ function App() {
     setCurrentUser(null);
     localStorage.removeItem("authToken");
     removeToken();
+    history.push("/login");
   };
 
   return (
@@ -60,7 +61,10 @@ function App() {
           <Register handleRegister={handleRegister} />
         </Route>
         <Route path="/boards">
-          <MainContainer />
+          <MainContainer
+            currentUser={currentUser}
+            handleLogout={handleLogout}
+          />
         </Route>
         <Route path="/">
           <Landing />
