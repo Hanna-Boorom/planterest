@@ -1,14 +1,31 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 export default function Layout(props) {
+  const { currentUser, handleLogout } = props;
   return (
     <div>
-      <header>Header here</header>
-      <nav>
+      <header>
         <NavLink to="/boards">
-          <p>Boards</p>
+          <h1>Planterest</h1>
         </NavLink>
-      </nav>
+        {currentUser ? (
+          <>
+            <p>Hi {currentUser.username}!</p>
+            <button onClick={handleLogout}>Logout</button>
+          </>
+        ) : (
+          <Link to="/login">Login/Register</Link>
+        )}
+      </header>
+
+      {currentUser && (
+        <nav>
+          <NavLink to="/boards">
+            <p>Boards</p>
+          </NavLink>
+        </nav>
+      )}
+
       {props.children}
     </div>
   );

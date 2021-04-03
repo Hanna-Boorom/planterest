@@ -52,23 +52,11 @@ export default function Register(props) {
           Password:
           <input
             type="text"
-            type="password"
             name="password"
             value={password}
             onChange={handleChange}
           />
         </label>
-
-        {/* <label>
-          Confirm Password:
-          <input
-            type="text"
-            type="password"
-            name="password"
-            value={password}
-            onChange={handleChange}
-          />
-        </label> */}
         <button type="submit">Register</button>
       </form>
       <p>Already have an account?</p>

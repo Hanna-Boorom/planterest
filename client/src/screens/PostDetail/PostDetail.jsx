@@ -1,12 +1,11 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { getOneBoard } from "../../services/boards";
 import { getOnePost } from "../../services/posts";
 
 export default function PostDetail(props) {
   const [currPost, setCurrPost] = useState(null);
   const { id, boardId } = useParams();
-  // const { handleDeletePost } = props;
+  const { handlePostDelete } = props;
 
   useEffect(() => {
     const fetchCurrPost = async () => {
@@ -25,10 +24,11 @@ export default function PostDetail(props) {
           <h5>{currPost.description}</h5>
           <img src={currPost.image_url} alt="post cover" />
           <div>
-            {/* <Link to={`/boards/${board.id}/posts/${currPost.id}/edit`}>
-              Edit This Post
-            </Link> */}
-            {/* <button onClick={handleDeletePost}>Delete This Post</button> */}
+            <button
+              onClick={() => handlePostDelete(currPost.board_id, currPost.id)}
+            >
+              Delete This Post
+            </button>
           </div>
         </div>
       )}

@@ -8,19 +8,14 @@ import BoardCreate from "../screens/BoardCreate/BoardCreate";
 import BoardEdit from "../screens/BoardEdit/BoardEdit";
 import BoardDetail from "../screens/BoardDetail/BoardDetail";
 import PostDetail from "../screens/PostDetail/PostDetail";
+import PostCreate from "../screens/PostCreate/PostCreate";
 
 // services imports
-import {
-  getAllPosts,
-  getOnePost,
-  addPost,
-  updatePost,
-  destroyPost,
-} from "../services/posts";
+// import { removeToken } from "../services/auth";
+import { addPost, destroyPost } from "../services/posts";
 
 import {
   getAllBoards,
-  getOneBoard,
   addBoard,
   putBoard,
   destroyBoard,
@@ -30,7 +25,7 @@ export default function MainContainer(props) {
   const [boards, setBoards] = useState([]);
   const [posts, setPosts] = useState([]);
   const history = useHistory();
-  const { currentUser } = props;
+  const { currentUser, handleLogout } = props;
 
   useEffect(() => {
     const fetchBoards = async () => {
@@ -40,15 +35,14 @@ export default function MainContainer(props) {
     fetchBoards();
   }, []);
 
-  // useEffect(() => {
-  //   const fetchPosts = async () => {
-  //     const postData = await getAllPosts();
-  //     setPosts(postData);
-  //     console.log(postData);
-  //   };
-  //   fetchPosts();
-  // }, []);
+  // LOGOUT
+  // const handleLogout = () => {
+  //   setCurrentUser(null);
+  //   localStorage.removeItem("authToken");
+  //   removeToken();
+  // };
 
+  // BOARD API CALLS
   const handleBoardCreate = async (boardData) => {
     const newBoard = await addBoard(boardData);
     setBoards((prevState) => [...prevState, newBoard]);
@@ -65,28 +59,40 @@ export default function MainContainer(props) {
     history.push("/boards");
   };
 
-  const handlePostDelete = async (id) => {
-    await destroyPost(id);
-    setPosts((prevState) => prevState.filter((post) => post.id !== id));
-  };
-
   const handleBoardDelete = async (id) => {
     await destroyBoard(id);
     setBoards((prevState) => prevState.filter((board) => board.id !== id));
     history.push("/boards");
   };
 
+  // POST API CALLS
+  const handlePostCreate = async (boardId, postData) => {
+    const newPost = await addPost(boardId, postData);
+    setBoards((prevState) => [...prevState, newPost]);
+    history.push(`/boards/${boardId}/posts/`);
+  };
+
+  const handlePostDelete = async (boardId, id) => {
+    await destroyPost(boardId, id);
+    setPosts((prevState) => prevState.filter((post) => post.id !== id));
+    history.push(`/boards/${boardId}`);
+  };
+
   return (
     <div>
-      <Layout currentUser={currentUser}>
+      <Layout currentUser={currentUser} handleLogout={handleLogout}>
         <Switch>
+          <Route path="/boards/:id/posts/create">
+            <PostCreate handlePostCreate={handlePostCreate} />
+          </Route>
           <Route path="/boards/:id/posts/:id">
             <PostDetail
               boards={boards}
-              posts={posts}
+              // posts={posts}
               handlePostDelete={handlePostDelete}
             />
           </Route>
+
           <Route path="/boards/create">
             <BoardCreate handleBoardCreate={handleBoardCreate} />
           </Route>

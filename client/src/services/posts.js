@@ -6,17 +6,14 @@ export const getAllPosts = async (boardId) => {
 };
 
 export const getOnePost = async (boardId, id) => {
-  const resp = await api.get(`boards/${boardId}/posts/${id}`);
+  const resp = await api.get(`/boards/${boardId}/posts/${id}`);
   return resp.data;
 };
 
-export const addPost = async (boardId, id) => {
-  const resp = await api.post(`boards/${boardId}/posts/${id}`);
-  return resp.data;
-};
-
-export const updatePost = async (boardId, id) => {
-  const resp = await api.put(`boards/${boardId}/posts/${id}`);
+export const addPost = async (boardId, postData) => {
+  const resp = await api.post(`/boards/${boardId}/posts/`, {
+    post: postData,
+  });
   return resp.data;
 };
 
