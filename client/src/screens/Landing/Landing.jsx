@@ -14,18 +14,26 @@ export default function Landing(props) {
 
       <div className="landing-images-container">
         <div className="landing-images">
-          <img className="landing-image" src={FicusLanding} alt="ficus" />
-          <img className="landing-image" src={MonsteraLanding} alt="monstera" />
-          <img className="landing-image" src={PothosLanding} alt="pothos" />
+          <img className="landing-image ficus" src={FicusLanding} alt="ficus" />
+          <img
+            className="landing-image monstera"
+            src={MonsteraLanding}
+            alt="monstera"
+          />
+          <img
+            className="landing-image pothos"
+            src={PothosLanding}
+            alt="pothos"
+          />
         </div>
 
         <div className="landing-text">
-          <h1>Welcome to Planterest! 🌿 </h1>
-          <h3>
+          <h1 className="welcome">Welcome to Planterest! 🌿 </h1>
+          <p className="landing-blurb">
             An image board site for plant-lovers to curate boards with images of
             their favorite flora
-          </h3>
-          <h4>Come on in, the air is fresh in here!</h4>
+          </p>
+          <p className="come-on-in">Come on in, the air is fresh in here!</p>
           <div className="landing-buttons">
             <Link to="/register">
               <p>Sign Up to start creating</p>
