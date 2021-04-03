@@ -6,7 +6,7 @@ class BoardsController < ApplicationController
   def index
     @boards = Board.all
 
-    render json: @boards, status: :ok
+    render json: @boards, include: :posts, status: :ok
 
     # @user = User.find(params:user_id)
     # @boards = Board.where(user_id: @user.id)
