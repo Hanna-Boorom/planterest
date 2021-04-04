@@ -21,49 +21,59 @@ export default function Register(props) {
 
   return (
     <div className="register-container">
-      <h2>Register</h2>
-      <img src={logo} alt="logo" />
-      <form
-        onSubmit={(e) => {
-          e.preventDefault();
-          handleRegister(formData);
-        }}
-      >
-        <label>
-          Username:
-          <input
-            type="text"
-            name="username"
-            value={username}
-            onChange={handleChange}
-          />
-        </label>
+      <div className="register-logo-and-form">
+        <div className="register-logo-container">
+          <img src={logo} alt="logo" />
+        </div>
 
-        <label>
-          Email:
-          <input
-            type="text"
-            name="email"
-            value={email}
-            onChange={handleChange}
-          />
-        </label>
+        <form
+          className="register-form"
+          onSubmit={(e) => {
+            e.preventDefault();
+            handleRegister(formData);
+          }}
+        >
+          <h3>Register</h3>
+          <label className="register-label">
+            Username:
+            <input
+              type="text"
+              name="username"
+              value={username}
+              onChange={handleChange}
+            />
+          </label>
 
-        <label>
-          Password:
-          <input
-            type="text"
-            name="password"
-            value={password}
-            onChange={handleChange}
-          />
-        </label>
-        <button type="submit">Register</button>
-      </form>
-      <p>Already have an account?</p>
-      <Link to="/login">
-        <button>Log In</button>
-      </Link>
+          <label className="register-label">
+            Email:
+            <input
+              type="text"
+              name="email"
+              value={email}
+              onChange={handleChange}
+            />
+          </label>
+
+          <label className="register-label">
+            Password:
+            <input
+              type="text"
+              name="password"
+              value={password}
+              onChange={handleChange}
+            />
+          </label>
+          <button className="register-button" type="submit">
+            Register
+          </button>
+        </form>
+      </div>
+      <div className="login-register">
+        <p>
+          Already have an account? <Link to="/login">Log In Here</Link>
+        </p>
+      </div>
+      <footer>Dev + Design by Hanna Boorom</footer>
     </div>
   );
 }
