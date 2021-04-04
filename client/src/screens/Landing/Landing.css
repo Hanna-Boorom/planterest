@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   height: fit-content;
+  font-family: "Croissant One", cursive;
 }
 .landing-logo-container {
   display: flex;
@@ -15,7 +16,7 @@
   justify-content: center;
   align-items: center;
   padding: 30px;
-  font-family: "Amatic SC", cursive;
+  margin-right: 50px;
 }
 
 .welcome {
@@ -53,13 +54,14 @@
   color: white;
   border-radius: 4px;
   padding: 7px;
-  font-family: "Amatic SC", cursive;
+  font-family: "Croissant One", cursive;
   font-size: 18px;
 }
 
 .footer {
   width: 100%;
   margin: 20px auto;
+  color: #507946;
 }
 
 .landing-buttons {

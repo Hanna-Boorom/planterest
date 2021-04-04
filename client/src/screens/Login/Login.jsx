@@ -20,40 +20,54 @@ export default function Login(props) {
 
   return (
     <div className="login-container">
-      <form
-        onSubmit={(e) => {
-          e.preventDefault();
-          handleLogin(formData);
-        }}
-      >
-        <h3>Login</h3>
-        <img src={logo} alt="logo" />
-        <label>
-          Email:
-          <input
-            type="text"
-            name="email"
-            value={email}
-            onChange={handleChange}
-          />
-        </label>
-        <br />
-        <label>
-          Password:
-          <input
-            type="password"
-            name="password"
-            value={password}
-            onChange={handleChange}
-          />
-        </label>
-        <br />
+      <div className="login-logo-and-form">
+        <div className="login-logo-container">
+          <img src={logo} alt="logo" />
+        </div>
+        <form
+          className="login-form"
+          onSubmit={(e) => {
+            e.preventDefault();
+            handleLogin(formData);
+          }}
+        >
+          <h3>Login</h3>
+          <div className="label-container">
+            <label className="login-label">
+              Email:
+              <input
+                type="text"
+                name="email"
+                value={email}
+                onChange={handleChange}
+              />
+            </label>
+            <br />
+            <label className="login-label">
+              Password:
+              <input
+                type="password"
+                name="password"
+                value={password}
+                onChange={handleChange}
+              />
+            </label>
+          </div>
+          <br />
 
-        <button>Log In</button>
-      </form>
-      <p>
-        Don't have an account yet? <Link to="/register">Register Here</Link>
-      </p>
+          <button className="login-button" type="submit">
+            Log In
+          </button>
+        </form>
+      </div>
+
+      <div className="login-register">
+        <p>
+          Don't have an account yet? <Link to="/register">Register Here</Link>
+        </p>
+      </div>
+
+      <footer>Dev + Design by Hanna Boorom</footer>
     </div>
   );
 }
