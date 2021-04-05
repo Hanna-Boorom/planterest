@@ -93,7 +93,11 @@ export default function MainContainer(props) {
             <BoardCreate handleBoardCreate={handleBoardCreate} />
           </Route>
           <Route path="/boards/:id/edit">
-            <BoardEdit boards={boards} handleBoardUpdate={handleBoardUpdate} />
+            <BoardEdit
+              posts={posts}
+              boards={boards}
+              handleBoardUpdate={handleBoardUpdate}
+            />
           </Route>
           <Route path="/boards/:id">
             <BoardDetail handleBoardDelete={handleBoardDelete} />
