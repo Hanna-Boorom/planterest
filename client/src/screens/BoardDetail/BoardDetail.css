@@ -24,6 +24,12 @@
   font-size: 16px;
 }
 
+.add-post-button:hover,
+.delete-board-button:hover,
+.edit-board-button:hover {
+  cursor: pointer;
+}
+
 .detail-title {
   color: #385531;
 }
@@ -46,7 +52,8 @@
 }
 
 .post-image {
-  height: 300px;
+  max-height: 300px;
+  max-width: 300px;
   margin: 0 30px;
   border: solid 1px #507946;
   border-radius: 15px;

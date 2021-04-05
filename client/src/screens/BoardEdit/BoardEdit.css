@@ -1,0 +1,45 @@
+.edit-create-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.edit-this-board {
+  color: #507946;
+  font-size: 40px;
+}
+
+.board-edit-form {
+  display: flex;
+  flex-direction: column;
+  width: 60vw;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.edit-board-label {
+  margin: 8px;
+  display: flex;
+  align-items: center;
+  color: #507946;
+  font-size: 30px;
+}
+
+.edit-board-input {
+  margin-left: 7px;
+  font-family: "Croissant One", cursive;
+}
+.edit-board-input textarea {
+  height: fit-content;
+}
+
+.edit-button {
+  width: 30%;
+  margin: 25px auto;
+  background-color: #507946;
+  color: white;
+  border-radius: 4px;
+  padding: 7px;
+  font-family: "Croissant One", cursive;
+  font-size: 18px;
+}

@@ -29,7 +29,6 @@ export default function PostCreate(props) {
         onSubmit={(e) => {
           e.preventDefault();
           handlePostCreate(id, formData);
-          console.log(formData);
         }}
       >
         <label className="create-post-label">

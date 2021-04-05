@@ -68,3 +68,82 @@ footer {
   margin: 20px auto;
   color: #507946;
 }
+
+footer a {
+  color: #507946;
+}
+
+footer a:link {
+  color: #507946;
+}
+
+footer a:visited {
+  color: #507946;
+}
+
+@media screen and (max-width: 600px) {
+  .login-logo-and-form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .login-logo-container img {
+    height: 250px;
+  }
+
+  .login-form {
+    padding: 20px;
+  }
+
+  .login-form h3 {
+    font-size: 30px;
+  }
+
+  .login-label,
+  .login-label input {
+    font-size: 25px;
+  }
+
+  .login-label input {
+    margin: 10px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .login-form {
+    width: 80vw;
+  }
+
+  .login-form h3 {
+    font-size: 25px;
+  }
+
+  .login-label,
+  .login-label input {
+    font-size: 18px;
+  }
+
+  .login-button {
+    background-color: #507946;
+    color: white;
+    border-radius: 4px;
+    padding: 7px;
+    font-family: "Croissant One", cursive;
+    font-size: 16px;
+    width: 30%;
+    margin: 0 auto;
+  }
+
+  .login-register {
+    width: 80vw;
+    margin: 0 auto;
+  }
+
+  footer {
+    width: 70vw;
+  }
+
+  footer a {
+    font-size: 20px;
+  }
+}

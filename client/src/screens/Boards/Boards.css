@@ -65,3 +65,23 @@
   border-radius: 15px;
   height: 300px;
 }
+
+@media screen and (max-width: 600px) {
+  .add-a-board {
+    margin: 0 auto;
+  }
+
+  .board-name {
+    font-size: 25px;
+  }
+
+  .boards-title {
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .board-image {
+    height: 250px;
+  }
+}
