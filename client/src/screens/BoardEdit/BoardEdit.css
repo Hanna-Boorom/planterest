@@ -12,9 +12,7 @@
 .board-edit-form {
   display: flex;
   flex-direction: column;
-  width: 60vw;
   align-items: center;
-  margin: 0 auto;
 }
 
 .edit-board-label {
@@ -23,6 +21,7 @@
   align-items: center;
   color: #507946;
   font-size: 30px;
+  width: fit-content;
 }
 
 .edit-board-input {
@@ -42,4 +41,41 @@
   padding: 7px;
   font-family: "Croissant One", cursive;
   font-size: 18px;
+}
+
+@media screen and (max-width: 600px) {
+  .edit-this-board {
+    font-size: 30px;
+  }
+
+  .edit-board-label {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .edit-this-board {
+    font-size: 28px;
+  }
+
+  .edit-board-label {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .edit-this-board {
+    font-size: 25px;
+  }
+
+  .edit-board-label {
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .edit-button {
+    width: 50%;
+    font-size: 16px;
+  }
 }
