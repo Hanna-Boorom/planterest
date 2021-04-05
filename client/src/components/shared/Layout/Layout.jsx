@@ -1,4 +1,5 @@
 import { NavLink, Link } from "react-router-dom";
+import "./Layout.css";
 import logo from "../../../assets/PlanterestLogo.png";
 
 export default function Layout(props) {
