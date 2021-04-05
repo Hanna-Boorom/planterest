@@ -1,0 +1,43 @@
+.mapped-details {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.bd-action-buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.add-post-button,
+.delete-board-button,
+.edit-board-button {
+  background-color: white;
+  border: none;
+  font-family: "Croissant One", cursive;
+  font-size: 16px;
+}
+
+.indiv-detail-container a {
+  color: black;
+  text-decoration: none;
+}
+
+.indiv-detail-container a:link {
+  color: black;
+}
+
+.indiv-detail-container a:visited {
+  color: black;
+}
+
+.indiv-detail-container a:hover {
+  color: green;
+}
+
+.post-image {
+  height: 300px;
+  margin: 0 30px;
+  border: solid 1px #507946;
+  border-radius: 15px;
+}
