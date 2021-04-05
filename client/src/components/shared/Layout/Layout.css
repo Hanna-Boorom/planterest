@@ -1,0 +1,33 @@
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #eaefe9;
+  border-bottom: solid 1px #507946;
+}
+
+header button {
+  font-family: "Croissant One", cursive;
+  background-color: #507946;
+  color: white;
+  border-radius: 6px;
+  border: 0;
+  padding: 5px;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+}
+
+nav a:link {
+  color: black;
+}
+
+nav a:visited {
+  color: black;
+}
+
+nav a:hover {
+  color: green;
+}

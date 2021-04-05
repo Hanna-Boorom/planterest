@@ -1,5 +1,10 @@
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
+import "./BoardDetail.css";
+import { faPlus } from "@fortawesome/free-solid-svg-icons";
+import { FaPencilAlt, FaTrashAlt } from "react-icons/fa";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 // services imports
 import { getOneBoard } from "../../services/boards";
@@ -19,29 +24,48 @@ export default function BoardDetail(props) {
   }, [id]);
 
   return (
-    <div>
+    <div className="board-detail-main-container">
       {currBoard && (
         <div>
-          <h1>{currBoard.name}</h1>
-          <h3>{currBoard.description}</h3>
-          {currBoard.posts.map((post) => (
-            <div key={currBoard.id}>
-              <Link to={`/boards/${currBoard.id}/posts/${post.id}`}>
-                <img alt="plant" src={post.image_url} />
-                <p>{post.name}</p>
-              </Link>
-            </div>
-          ))}
+          <div className="bd-action-buttons">
+            <Link to={`/boards/${currBoard.id}/posts/create`}>
+              <button className="add-post-button">
+                <FontAwesomeIcon icon={faPlus} /> Add a Post
+              </button>
+            </Link>
 
-          <Link to={`/boards/${currBoard.id}/posts/create`}>
-            <button>Add a Post</button>
-          </Link>
-          <Link to={`/boards/${currBoard.id}/edit`}>
-            <button>Edit This Board</button>
-          </Link>
-          <button onClick={() => handleBoardDelete(currBoard.id)}>
-            Delete This Board
-          </button>
+            <Link to={`/boards/${currBoard.id}/edit`}>
+              <button className="edit-board-button">
+                {" "}
+                <FaPencilAlt /> Edit This Board
+              </button>
+            </Link>
+
+            <button
+              className="delete-board-button"
+              onClick={() => handleBoardDelete(currBoard.id)}
+            >
+              <FaTrashAlt /> Delete This Board
+            </button>
+          </div>
+          <div className="detail-title">
+            <h1>{currBoard.name}</h1>
+            <h3>{currBoard.description}</h3>
+            <div className="mapped-details">
+              {currBoard.posts.map((post) => (
+                <div className="indiv-detail-container" key={currBoard.id}>
+                  <Link to={`/boards/${currBoard.id}/posts/${post.id}`}>
+                    <img
+                      className="post-image"
+                      alt="plant"
+                      src={post.image_url}
+                    />
+                    <p>{post.name}</p>
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       )}
     </div>

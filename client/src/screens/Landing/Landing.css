@@ -1,7 +1,11 @@
 .landing-container {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: fit-content;
+  font-family: "Croissant One", cursive;
+}
+.landing-logo-container {
+  display: flex;
 }
 
 .landing-text {
@@ -12,16 +16,37 @@
   justify-content: center;
   align-items: center;
   padding: 30px;
+  margin-right: 50px;
+}
+
+.welcome {
+  font-size: 50px;
+}
+
+.landing-blurb {
+  font-size: 32px;
+}
+
+.come-on-in {
+  font-size: 24px;
 }
 
 .landing-images-container {
   display: flex;
   flex-direction: row;
-  height: 100vh;
 }
 
 .landing-image {
-  height: 200px;
+  padding: 25px;
+}
+
+.ficus,
+.pothos {
+  max-height: 300px;
+}
+
+.monstera {
+  width: 300px;
 }
 
 .landing-login-button {
@@ -29,9 +54,30 @@
   color: white;
   border-radius: 4px;
   padding: 7px;
+  font-family: "Croissant One", cursive;
+  font-size: 18px;
 }
 
 .footer {
-  position: sticky;
-  height: 20vh;
+  width: 100%;
+  margin: 20px auto;
+  color: #507946;
+}
+
+.landing-buttons {
+  font-size: 22px;
+}
+
+.landing-buttons a {
+  color: black;
+  font-weight: bold;
+}
+
+.landing-buttons a:link {
+  color: black;
+  text-decoration: none;
+}
+
+.landing-buttons a:hover {
+  color: green;
 }

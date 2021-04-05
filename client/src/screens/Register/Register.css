@@ -1,0 +1,56 @@
+.register-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  font-family: "Croissant One", cursive;
+}
+
+.register-logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.register-logo-container img {
+  height: 300px;
+}
+
+.register-logo-and-form {
+  display: flex;
+  justify-content: center;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #507946;
+  padding: 40px;
+}
+
+.register-form h3 {
+  font-size: 40px;
+}
+
+.register-label,
+.register-label input {
+  font-size: 30px;
+}
+
+.register-label {
+  margin: 5px;
+}
+
+.register-label input {
+  margin-left: 15px;
+}
+
+.register-button {
+  background-color: #507946;
+  color: white;
+  border-radius: 4px;
+  padding: 7px;
+  font-family: "Croissant One", cursive;
+  font-size: 18px;
+  width: 30%;
+  margin: 10px auto;
+}
