@@ -24,7 +24,7 @@ export default function Boards(props) {
           <div className="indiv-board-container" key={board.id}>
             <Link to={`/boards/${board.id}`}>
               <p className="board-name">{board.name}</p>
-              {board.posts[0] ? (
+              {board && board.posts[0] ? (
                 <img
                   className="board-image"
                   src={board.posts[0].image_url}
