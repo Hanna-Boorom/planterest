@@ -14,3 +14,20 @@
   font-family: "Croissant One", cursive;
   font-size: 18px;
 }
+
+@media screen and (max-width: 600px) {
+  .post-description {
+    width: 80vw;
+    margin: 20px auto;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .post-detail-image {
+    height: 250px;
+  }
+
+  .delete-post-button {
+    font-size: 14px;
+  }
+}
