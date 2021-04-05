@@ -69,6 +69,18 @@ footer {
   color: #507946;
 }
 
+footer a {
+  color: #507946;
+}
+
+footer a:link {
+  color: #507946;
+}
+
+footer a:visited {
+  color: #507946;
+}
+
 @media screen and (max-width: 600px) {
   .login-logo-and-form {
     flex-direction: column;
@@ -98,9 +110,12 @@ footer {
 }
 
 @media screen and (max-width: 350px) {
+  .login-form {
+    width: 80vw;
+  }
+
   .login-form h3 {
     font-size: 25px;
-    width: 80vw;
   }
 
   .login-label,
@@ -122,5 +137,13 @@ footer {
   .login-register {
     width: 80vw;
     margin: 0 auto;
+  }
+
+  footer {
+    width: 70vw;
+  }
+
+  footer a {
+    font-size: 20px;
   }
 }
