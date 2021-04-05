@@ -40,7 +40,7 @@ export default function BoardCreate(props) {
 
         <label className="create-board-label">
           Description:
-          <input
+          <textarea
             className="create-board-input"
             type="text"
             name="description"

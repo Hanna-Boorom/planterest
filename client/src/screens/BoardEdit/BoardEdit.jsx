@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-// import TextfField from "@material-ui/core/TextField";
+import "./BoardEdit.css";
 
 export default function BoardEdit(props) {
   const [formData, setFormData] = useState({
@@ -35,7 +35,6 @@ export default function BoardEdit(props) {
 
   return (
     <div>
-      {/* {currBoard && ( */}
       <form
         onSubmit={(e) => {
           e.preventDefault();
@@ -58,7 +57,6 @@ export default function BoardEdit(props) {
         </label>
         <button type="submit">Submit</button>
       </form>
-      {/* )} */}
     </div>
   );
 }

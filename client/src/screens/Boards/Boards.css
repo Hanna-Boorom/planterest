@@ -18,28 +18,28 @@
   font-size: 30px;
 }
 
-.boards-title a {
-  color: black;
-}
-
-.create-a-board {
+.add-a-board {
   display: flex;
   justify-content: flex-end;
   margin-right: 80px;
 }
 
-.create-a-board a {
+.add-a-board a {
   color: black;
   text-decoration: none;
 }
 
-.create-a-board a:visited {
+.add-a-board a:visited {
   color: black;
   text-decoration: none;
 }
 
-.create-a-board a:hover {
+.add-a-board a:hover {
   color: green;
+}
+
+.boards-title a {
+  color: black;
 }
 
 .board-name {
