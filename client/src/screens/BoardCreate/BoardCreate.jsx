@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./BoardCreate.css";
 
 export default function BoardCreate(props) {
   const [formData, setFormData] = useState({
@@ -17,29 +18,39 @@ export default function BoardCreate(props) {
   };
 
   return (
-    <div>
-      <h3>Create a Board</h3>
+    <div className="board-create-container">
+      <h3 className="create-a-board">Create a Board</h3>
       <form
+        className="create-board-form"
         onSubmit={(e) => {
           e.preventDefault();
           handleBoardCreate(formData);
         }}
       >
-        <label>
+        <label className="create-board-label">
           Title:
-          <input type="text" name="name" value={name} onChange={handleChange} />
+          <input
+            className="create-board-input"
+            type="text"
+            name="name"
+            value={name}
+            onChange={handleChange}
+          />
         </label>
 
-        <label>
+        <label className="create-board-label">
           Description:
-          <input
+          <textarea
+            className="create-board-input"
             type="text"
             name="description"
             value={description}
             onChange={handleChange}
           />
         </label>
-        <button type="submit">Create!</button>
+        <button className="create-button" type="submit">
+          Create!
+        </button>
       </form>
     </div>
   );

@@ -13,7 +13,7 @@ export default function Boards(props) {
       <div className="boards-title">
         <h3>My Boards</h3>
       </div>
-      <div className="create-a-board">
+      <div className="add-a-board">
         <Link to="/boards/create">
           <FontAwesomeIcon icon={faPlus} /> Add a Board
         </Link>
