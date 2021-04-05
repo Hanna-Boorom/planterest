@@ -68,3 +68,37 @@ footer {
   margin: 20px auto;
   color: #507946;
 }
+
+@media screen and (max-width: 600px) {
+  .login-logo-and-form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .login-logo-container img {
+    height: 250px;
+  }
+
+  .login-form {
+    padding: 20px;
+  }
+
+  .login-form h3 {
+    font-size: 30px;
+  }
+
+  .login-label,
+  .login-label input {
+    font-size: 25px;
+  }
+
+  .login-label input {
+    margin: 10px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .board-image {
+    height: 250px;
+  }
+}
