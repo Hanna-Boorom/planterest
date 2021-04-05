@@ -44,55 +44,55 @@ This will be the largest app I've made on my own, so I'm a bit intimidated going
 
 <details><summary>Landing</summary>
       
-![Landing](https://github.com/Hanna-Boorom/planterest/blob/main/Landing%20Wireframes.png)
+![Landing](https://github.com/Hanna-Boorom/planterest/blob/main/README-images/Landing%20Wireframes.png)
 
 </details>
 
 <details><summary>Login</summary>
       
-![Login](https://github.com/Hanna-Boorom/planterest/blob/main/Login%20Wireframes.png)
+![Login](https://github.com/Hanna-Boorom/planterest/blob/main/README-images/Login%20Wireframes.png)
 
 </details>
 
 <details><summary>Register</summary>
       
-![Register](https://github.com/Hanna-Boorom/planterest/blob/main/Register%20Wireframes.png)
+![Register](https://github.com/Hanna-Boorom/planterest/blob/main/README-images/Register%20Wireframes.png)
 
 </details>
 
 <details><summary>Boards</summary>
       
-![Boards](https://github.com/Hanna-Boorom/planterest/blob/main/Boards%20Wireframes.png)
+![Boards](https://github.com/Hanna-Boorom/planterest/blob/main/README-images/Boards%20Wireframes.png)
 
 </details>
 
 <details><summary>BoardDetail</summary>
       
-![BoardDetail](https://github.com/Hanna-Boorom/planterest/blob/main/BoardDetail%20Wireframes.png)
+![BoardDetail](https://github.com/Hanna-Boorom/planterest/blob/main/README-images/BoardDetail%20Wireframes.png)
 
 </details>
 
 <details><summary>BoardEdit</summary>
       
-![BoardEdit](https://github.com/Hanna-Boorom/planterest/blob/main/BoardEdit%20Wireframes.png)
+![BoardEdit](https://github.com/Hanna-Boorom/planterest/blob/main/README-images/BoardEdit%20Wireframes.png)
 
 </details>
 
 <details><summary>BoardCreate</summary>
       
-![BoardCreate](https://github.com/Hanna-Boorom/planterest/blob/main/BoardCreate%20Wireframes.png)
+![BoardCreate](https://github.com/Hanna-Boorom/planterest/blob/main/README-images/BoardCreate%20Wireframes.png)
 
 </details>
 
 <details><summary>PostDetail</summary>
       
-![PostDetail](https://github.com/Hanna-Boorom/planterest/blob/main/PostDetail%20Wireframes.png)
+![PostDetail](https://github.com/Hanna-Boorom/planterest/blob/main/README-images/PostDetail%20Wireframes.png)
 
 </details>
 
 <details><summary>PostEdit</summary>
       
-![PostEdit](https://github.com/Hanna-Boorom/planterest/blob/main/PostEdit%20Wireframes.png)
+![PostEdit](https://github.com/Hanna-Boorom/planterest/blob/main/README-images/PostEdit%20Wireframes.png)
 
 </details>
 
@@ -104,7 +104,7 @@ This will be the largest app I've made on my own, so I'm a bit intimidated going
 
 #### Component Tree
 
-![Component Tree](https://github.com/Hanna-Boorom/planterest/blob/main/Component%20Tree.png)
+![Component Tree](https://github.com/Hanna-Boorom/planterest/blob/main/README-images/Component%20Tree.png)
 
 #### Component Architecture
 
@@ -167,7 +167,7 @@ src
 
 <details><summary>ERD</summary>
       
-![Planterest ERD](https://github.com/Hanna-Boorom/planterest/blob/main/Planterest%20ERD1.png)
+![Planterest ERD](https://github.com/Hanna-Boorom/planterest/blob/main/README-images/Planterest%20ERD1.png)
 
 </details>
 
