@@ -34,28 +34,38 @@ export default function BoardEdit(props) {
   };
 
   return (
-    <div>
+    <div className="board-edit-container">
       <form
+        className="board-edit-form"
         onSubmit={(e) => {
           e.preventDefault();
           handleBoardUpdate(id, formData);
         }}
       >
-        <h3>Edit this Board</h3>
-        <label>
+        <h3 className="edit-this-board">Edit this Board</h3>
+        <label className="edit-board-label">
           Title:
-          <input name="name" value={name} onChange={handleChange} />
+          <input
+            className="edit-board-input"
+            name="name"
+            value={name}
+            onChange={handleChange}
+          />
         </label>
 
-        <label>
+        <label className="edit-board-label">
+          Description:
           <textarea
+            className="edit-board-input"
             type="text"
             name="description"
             value={description}
             onChange={handleChange}
           />
         </label>
-        <button type="submit">Submit</button>
+        <button className="edit-button" type="submit">
+          Submit
+        </button>
       </form>
     </div>
   );
