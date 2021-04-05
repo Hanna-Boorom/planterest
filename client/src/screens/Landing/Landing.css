@@ -1,0 +1,48 @@
+.landing-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.landing-text {
+  border: 2px solid #507946;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.landing-images-container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+
+.landing-image {
+  padding: 25px;
+}
+
+.ficus,
+.pothos {
+  max-height: 300px;
+}
+
+
+.monstera {
+  width: 300px;
+}
+
+.landing-login-button {
+  background-color: #507946;
+  color: white;
+  border-radius: 4px;
+  padding: 7px;
+}
+
+.footer {
+  position: sticky;
+  /* height: 20vh; */
+  margin-top: 50px;
+}
