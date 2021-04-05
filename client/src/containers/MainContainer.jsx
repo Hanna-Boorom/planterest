@@ -36,14 +36,7 @@ export default function MainContainer(props) {
       setBoards(boardData);
     };
     fetchBoards();
-  }, []);
-
-  // LOGOUT
-  // const handleLogout = () => {
-  //   setCurrentUser(null);
-  //   localStorage.removeItem("authToken");
-  //   removeToken();
-  // };
+  }, [boards]);
 
   // BOARD API CALLS
   const handleBoardCreate = async (boardData) => {
