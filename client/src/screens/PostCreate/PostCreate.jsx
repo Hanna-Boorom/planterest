@@ -23,7 +23,7 @@ export default function PostCreate(props) {
 
   return (
     <div className="post-create-containter">
-      <h3>Create a Post</h3>
+      <h3 className="create-a-post">Create a Post</h3>
       <form
         className="create-post-form"
         onSubmit={(e) => {

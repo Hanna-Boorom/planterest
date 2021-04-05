@@ -3,6 +3,11 @@
   flex-direction: column;
 }
 
+.create-a-post {
+  color: #507946;
+  font-size: 40px;
+}
+
 .create-post-form {
   display: flex;
   flex-direction: column;
@@ -16,6 +21,8 @@
   margin: 8px;
   display: flex;
   align-items: center;
+  color: #507946;
+  font-size: 30px;
 }
 
 .create-post-input {
