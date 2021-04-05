@@ -13,20 +13,19 @@ export default function Layout(props) {
         {currentUser ? (
           <>
             <p>Hi {currentUser.username}!</p>
+            {currentUser && (
+              <nav>
+                <NavLink to="/boards">
+                  <p>Boards</p>
+                </NavLink>
+              </nav>
+            )}
             <button onClick={handleLogout}>Logout</button>
           </>
         ) : (
           <Link to="/login">Login/Register</Link>
         )}
       </header>
-
-      {currentUser && (
-        <nav>
-          <NavLink to="/boards">
-            <p>Boards</p>
-          </NavLink>
-        </nav>
-      )}
 
       {props.children}
     </div>

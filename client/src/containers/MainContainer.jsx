@@ -36,7 +36,7 @@ export default function MainContainer(props) {
       setBoards(boardData);
     };
     fetchBoards();
-  }, [boards]);
+  }, []);
 
   // BOARD API CALLS
   const handleBoardCreate = async (boardData) => {
