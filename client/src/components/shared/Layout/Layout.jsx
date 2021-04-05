@@ -12,7 +12,7 @@ export default function Layout(props) {
         </NavLink>
         {currentUser ? (
           <>
-            <p>Hi {currentUser.username}!</p>
+            <p className="user-greeting">Hi {currentUser.username}!</p>
             {currentUser && (
               <nav>
                 <NavLink to="/boards">

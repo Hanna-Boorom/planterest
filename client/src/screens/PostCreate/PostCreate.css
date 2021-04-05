@@ -40,3 +40,33 @@
   font-family: "Croissant One", cursive;
   font-size: 18px;
 }
+
+@media screen and (max-width: 600px) {
+  .create-a-post {
+    font-size: 32px;
+  }
+
+  .create-post-label {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .create-post-container {
+    width: 80vw;
+    margin: 0 auto;
+  }
+  .create-a-post {
+    font-size: 25px;
+  }
+
+  .create-post-label {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+  }
+
+  .create-button {
+    width: 70%;
+  }
+}

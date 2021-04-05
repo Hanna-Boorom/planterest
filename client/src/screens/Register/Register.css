@@ -84,3 +84,23 @@
     margin: 10px;
   }
 }
+
+@media screen and (max-width: 350px) {
+  .register-logo-and-form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .register-form {
+    width: 80vw;
+  }
+
+  .github {
+    margin-left: 4px;
+  }
+
+  .register-button {
+    font-size: 14px;
+    width: 30%;
+  }
+}

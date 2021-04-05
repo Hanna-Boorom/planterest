@@ -135,8 +135,12 @@ footer a:visited {
   }
 
   .login-register {
-    width: 80vw;
+    width: 70vw;
     margin: 0 auto;
+  }
+
+  .github {
+    margin-left: 4px;
   }
 
   footer {
