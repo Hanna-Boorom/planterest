@@ -1,12 +1,18 @@
 .mapped-details {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   margin-top: 50px;
+}
+
+.mapped-details p {
+  color: #385531;
 }
 
 .bd-action-buttons {
   display: flex;
   justify-content: space-around;
+  padding: 30px;
 }
 
 .add-post-button,
@@ -18,9 +24,9 @@
   font-size: 16px;
 }
 
-/* .indiv-detail-container {
-  color: 
-} */
+.detail-title {
+  color: #385531;
+}
 
 .indiv-detail-container a {
   color: black;
