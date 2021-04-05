@@ -29,6 +29,7 @@
 
 .come-on-in {
   font-size: 24px;
+  color: #507946;
 }
 
 .landing-images-container {
@@ -80,4 +81,66 @@
 
 .landing-buttons a:hover {
   color: green;
+}
+
+@media screen and (max-width: 720px) {
+  .landing-images-container {
+    flex-direction: column;
+  }
+
+  .landing-text {
+    order: 1;
+    margin: 0 50px;
+  }
+
+  .welcome {
+    font-size: 40px;
+  }
+
+  .landing-blurb {
+    font-size: 28px;
+  }
+
+  .landing-images {
+    order: 2;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .welcome {
+    font-size: 32px;
+  }
+
+  .landing-blurb {
+    font-size: 25px;
+    font-weight: none;
+  }
+
+  .landing-images {
+    order: 2;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .landing-logo-container {
+    justify-content: center;
+  }
+
+  .welcome {
+    font-size: 28px;
+  }
+
+  .landing-blurb {
+    font-size: 20px;
+    font-weight: none;
+  }
+
+  .come-on-in {
+    font-size: 18px;
+  }
+
+  .login-cta {
+    font-size: 18px;
+    margin-top: 40px;
+  }
 }

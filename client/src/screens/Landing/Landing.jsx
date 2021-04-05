@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { FaLinkedin, FaGithubSquare } from "react-icons/fa";
 import "./Landing.css";
 import FicusLanding from "../../assets/FicusLanding.jpeg";
 import MonsteraLanding from "../../assets/MonsteraLanding.jpeg";
@@ -38,7 +39,7 @@ export default function Landing(props) {
             <Link to="/register">
               <p>Sign Up to start creating</p>
             </Link>
-            <p>Already have an account?</p>
+            <p className="login-cta">Already have an account?</p>
             <Link to="/login">
               <button className="landing-login-button">Log in</button>
             </Link>
@@ -47,7 +48,23 @@ export default function Landing(props) {
       </div>
 
       <div className="footer">
-        <footer>Dev + Design by Hanna Boorom</footer>
+        <footer>
+          Dev + Design by Hanna Boorom{" "}
+          <a
+            rel="noreferrer"
+            target="blank"
+            href="https://www.linkedin.com/in/hanna-boorom/"
+          >
+            <FaLinkedin />
+          </a>
+          <a
+            rel="noreferrer"
+            target="blank"
+            href="https://github.com/Hanna-Boorom"
+          >
+            <FaGithubSquare />
+          </a>
+        </footer>
       </div>
     </div>
   );

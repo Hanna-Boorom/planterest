@@ -12,7 +12,6 @@ export default function PostDetail(props) {
     const fetchCurrPost = async () => {
       const postData = await getOnePost(boardId, id);
       setCurrPost(postData);
-      console.log(postData);
     };
     fetchCurrPost();
   }, [boardId, id]);
