@@ -1,0 +1,16 @@
+.post-detail-image {
+  height: 400px;
+  margin: 0 30px;
+  border: solid 1px #507946;
+  border-radius: 15px;
+}
+
+.delete-post-button {
+  margin: 25px auto;
+  background-color: #507946;
+  color: white;
+  border-radius: 4px;
+  padding: 7px;
+  font-family: "Croissant One", cursive;
+  font-size: 18px;
+}
