@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
+import "./PostCreate.css";
 
 export default function PostCreate(props) {
   const [formData, setFormData] = useState({
@@ -21,23 +22,31 @@ export default function PostCreate(props) {
   };
 
   return (
-    <div>
-      <h3>Create a Post</h3>
+    <div className="post-create-containter">
+      <h3 className="create-a-post">Create a Post</h3>
       <form
+        className="create-post-form"
         onSubmit={(e) => {
           e.preventDefault();
           handlePostCreate(id, formData);
           console.log(formData);
         }}
       >
-        <label>
+        <label className="create-post-label">
           Title:
-          <input type="text" name="name" value={name} onChange={handleChange} />
+          <input
+            className="create-post-input"
+            type="text"
+            name="name"
+            value={name}
+            onChange={handleChange}
+          />
         </label>
 
-        <label>
+        <label className="create-post-label">
           Description:
           <textarea
+            className="create-post-input"
             type="text"
             name="description"
             value={description}
@@ -45,16 +54,19 @@ export default function PostCreate(props) {
           />
         </label>
 
-        <label>
+        <label className="create-post-label">
           Image URL:
           <input
+            className="create-post-input"
             type="text"
             name="image_url"
             value={image_url}
             onChange={handleChange}
           />
         </label>
-        <button type="submit">Create!</button>
+        <button className="create-button" type="submit">
+          Create!
+        </button>
       </form>
     </div>
   );
