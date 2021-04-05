@@ -54,3 +54,33 @@
   width: 30%;
   margin: 10px auto;
 }
+
+@media screen and (max-width: 600px) {
+  .register-logo-and-form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .register-logo-container img {
+    height: 250px;
+  }
+
+  .register-form {
+    /* padding: 20px; */
+    padding: 10px;
+  }
+
+  .register-form h3 {
+    font-size: 30px;
+  }
+
+  .register-label,
+  .register-label input {
+    /* font-size: 25px; */
+    font-size: 18px;
+  }
+
+  .register-label input {
+    margin: 10px;
+  }
+}
