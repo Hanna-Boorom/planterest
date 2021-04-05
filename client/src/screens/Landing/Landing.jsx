@@ -51,6 +51,7 @@ export default function Landing(props) {
         <footer>
           Dev + Design by Hanna Boorom{" "}
           <a
+            className="linkedin"
             rel="noreferrer"
             target="blank"
             href="https://www.linkedin.com/in/hanna-boorom/"
@@ -58,6 +59,7 @@ export default function Landing(props) {
             <FaLinkedin />
           </a>
           <a
+            className="github"
             rel="noreferrer"
             target="blank"
             href="https://github.com/Hanna-Boorom"

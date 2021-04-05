@@ -95,6 +95,10 @@
     width: 80vw;
   }
 
+  .github {
+    margin-left: 4px;
+  }
+
   .register-button {
     font-size: 14px;
     width: 30%;

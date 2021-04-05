@@ -32,3 +32,19 @@ nav a:visited {
 nav a:hover {
   color: green;
 }
+
+@media screen and (max-width: 350px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+  }
+
+  .user-greeting {
+    margin-top: 0;
+  }
+
+  header img {
+    height: 150px;
+  }
+}

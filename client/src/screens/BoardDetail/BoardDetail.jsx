@@ -48,8 +48,8 @@ export default function BoardDetail(props) {
             </button>
           </div>
           <div className="detail-title">
-            <h1>{currBoard.name}</h1>
-            <h3>{currBoard.description}</h3>
+            <h1 className="bd-board-name">{currBoard.name}</h1>
+            <h3 className="bd-board-description">{currBoard.description}</h3>
             <div className="mapped-details">
               {currBoard.posts.map((post) => (
                 <div className="indiv-detail-container" key={currBoard.id}>
