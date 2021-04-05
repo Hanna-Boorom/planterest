@@ -1,0 +1,30 @@
+.board-create-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.create-a-board {
+  color: #507946;
+  font-size: 40px;
+}
+
+.create-board-form {
+  display: flex;
+  flex-direction: column;
+  width: 60vw;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.create-board-label {
+  margin: 8px;
+  display: flex;
+  align-items: center;
+  color: #507946;
+  font-size: 30px;
+}
+
+.create-board-input {
+  margin-left: 7px;
+}
