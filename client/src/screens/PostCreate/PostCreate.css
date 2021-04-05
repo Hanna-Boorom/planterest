@@ -1,0 +1,41 @@
+.post-create-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.create-a-post {
+  color: #507946;
+  font-size: 40px;
+}
+
+.create-post-form {
+  display: flex;
+  flex-direction: column;
+  width: 60vw;
+  /* justify-content: start; */
+  align-items: center;
+  margin: 0 auto;
+}
+
+.create-post-label {
+  margin: 8px;
+  display: flex;
+  align-items: center;
+  color: #507946;
+  font-size: 30px;
+}
+
+.create-post-input {
+  margin-left: 7px;
+}
+
+.create-button {
+  width: 30%;
+  margin: 25px auto;
+  background-color: #507946;
+  color: white;
+  border-radius: 4px;
+  padding: 7px;
+  font-family: "Croissant One", cursive;
+  font-size: 18px;
+}

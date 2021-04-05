@@ -1,0 +1,70 @@
+.login-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  font-family: "Croissant One", cursive;
+}
+
+.login-logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.login-logo-container img {
+  height: 300px;
+}
+
+.login-logo-and-form {
+  display: flex;
+  justify-content: center;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #507946;
+  padding: 40px;
+}
+
+.login-form h3 {
+  font-size: 40px;
+}
+
+.login-label,
+.login-label input {
+  font-size: 30px;
+}
+
+.login-label input {
+  margin-left: 15px;
+}
+
+.login-button {
+  background-color: #507946;
+  color: white;
+  border-radius: 4px;
+  padding: 7px;
+  font-family: "Croissant One", cursive;
+  font-size: 18px;
+  width: 30%;
+  margin: 0 auto;
+}
+
+.login-register a {
+  color: black;
+}
+
+.login-register a:visited {
+  color: black;
+}
+
+.login-register a:hover {
+  color: green;
+}
+
+footer {
+  width: 100%;
+  margin: 20px auto;
+  color: #507946;
+}
