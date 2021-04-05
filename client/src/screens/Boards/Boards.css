@@ -1,6 +1,7 @@
 .boards-main-container {
   display: flex;
   flex-direction: column;
+  margin-top: 40px;
 }
 
 .boards-container {
@@ -13,6 +14,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #385531;
+  font-size: 30px;
 }
 
 .boards-title a {
@@ -41,10 +44,15 @@
 
 .board-name {
   font-size: 30px;
+  margin-bottom: 10px;
 }
 
 .indiv-board-container {
   padding: 0 35px;
+}
+
+.indiv-board-container p {
+  color: #385531;
 }
 
 .indiv-board-container a {
