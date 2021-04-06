@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { FaLinkedin, FaGithubSquare } from "react-icons/fa";
 import "./Login.css";
 
 export default function Login(props) {
@@ -67,7 +68,25 @@ export default function Login(props) {
         </p>
       </div>
 
-      <footer>Dev + Design by Hanna Boorom</footer>
+      <footer>
+        Dev + Design by Hanna Boorom{" "}
+        <a
+          className="linkedin"
+          rel="noreferrer"
+          target="blank"
+          href="https://www.linkedin.com/in/hanna-boorom/"
+        >
+          <FaLinkedin />
+        </a>
+        <a
+          className="github"
+          rel="noreferrer"
+          target="blank"
+          href="https://github.com/Hanna-Boorom"
+        >
+          <FaGithubSquare />
+        </a>
+      </footer>
     </div>
   );
 }

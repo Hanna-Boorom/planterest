@@ -1,0 +1,81 @@
+.edit-create-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.edit-this-board {
+  color: #507946;
+  font-size: 40px;
+}
+
+.board-edit-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.edit-board-label {
+  margin: 8px;
+  display: flex;
+  align-items: center;
+  color: #507946;
+  font-size: 30px;
+  width: fit-content;
+}
+
+.edit-board-input {
+  margin-left: 7px;
+  font-family: "Croissant One", cursive;
+}
+.edit-board-input textarea {
+  height: fit-content;
+}
+
+.edit-button {
+  width: 30%;
+  margin: 25px auto;
+  background-color: #507946;
+  color: white;
+  border-radius: 4px;
+  padding: 7px;
+  font-family: "Croissant One", cursive;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 600px) {
+  .edit-this-board {
+    font-size: 30px;
+  }
+
+  .edit-board-label {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .edit-this-board {
+    font-size: 28px;
+  }
+
+  .edit-board-label {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .edit-this-board {
+    font-size: 25px;
+  }
+
+  .edit-board-label {
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .edit-button {
+    width: 50%;
+    font-size: 16px;
+  }
+}
