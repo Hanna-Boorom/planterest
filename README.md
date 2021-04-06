@@ -192,4 +192,4 @@ While it looks simple, I was proud to figure out how to create a post from a giv
 
 ## Code Issues & Resolutions
 
-I originally designed my code so that when looking at all boards, each board's cover photo would be the image of the first post. When a new board was created with no posts, however, the app would throw errors since the board had no posts. I created a hotfix that shows the same picture as the cover photo for all boards. I plan on fixing this in the future.
+I originally designed my code so that when looking at all boards, each board's cover photo would be the image of the first post. When a new board was created with no posts, however, the app would throw errors since the board had no posts. With the help of my instructors, I was able to fix the issue, which was that I wasn't including the posts of each board in the JSON response when creating a board, so I didn't have access to those values.
