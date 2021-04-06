@@ -23,6 +23,7 @@ class BoardsController < ApplicationController
     @board = Board.new(board_params)
     @board.user = @current_user
 
+    # this should include posts
     if @board.save
       render json: @board, status: :created, location: @board
     else
