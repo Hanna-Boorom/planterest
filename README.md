@@ -31,6 +31,7 @@ This will be the largest app I've made on my own, so I'm a bit intimidated going
 | :--------------: | :---------------------------------------------------------------------------- |
 |      React       | A frontend component library used to render the client-facing side of the app |
 | React Router Dom | Allows for easy routing in React                                              |
+|   React Icons    | Use icons from FontAwesome and other icon services as components              |
 |      Axios       | Used to make HTTP requests from the browser                                   |
 |      Rails       | Used in conjunction with Ruby to create a server-side application             |
 |      Bcrypt      | Used to enable encryption easily                                              |
@@ -138,26 +139,26 @@ src
 | Task                      | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------------- | :------: | :------------: | :-----------: | :---------: |
 | Backend                   |          |                |               |             |
-| Create Rails Database     |    H     |     .5 hrs     |      TBD      |     TBD     |
-| Scaffold Tables           |    H     |     .5 hrs     |      TBD      |     TBD     |
-| Create Associations       |    H     |     1 hrs      |      TBD      |     TBD     |
-| Set Up Auth               |    H     |     1 hrs      |      TBD      |     TBD     |
-| Create Validations        |    H     |     1 hrs      |      TBD      |     TBD     |
-| Configure Controllers     |    H     |     1 hrs      |      TBD      |     TBD     |
-| Set Up Routes             |    H     |     1 hrs      |      TBD      |     TBD     |
-| Rails Testing             |    H     |     2 hrs      |      TBD      |     TBD     |
+| Create Rails Database     |    H     |     .5 hrs     |     .5hrs     |    .5hrs    |
+| Scaffold Tables           |    H     |     .5 hrs     |     .5hrs     |    .5hrs    |
+| Create Associations       |    H     |      1 hr      |      1hr      |     1hr     |
+| Set Up Auth               |    H     |      1 hr      |      1hr      |     1hr     |
+| Create Validations        |    H     |      1 hr      |      1hr      |     1hr     |
+| Configure Controllers     |    H     |      1 hr      |      1hr      |     1hr     |
+| Set Up Routes             |    H     |      1 hr      |      1hr      |     1hr     |
+| Rails Testing             |    H     |     2 hrs      |      4hr      |     4hr     |
 | Frontend                  |          |                |               |             |
-| Create React App          |    H     |     .5 hrs     |      TBD      |     TBD     |
-| Clean Up Boilerplate      |    H     |     .5 hrs     |      TBD      |     TBD     |
-| Create Component Skeleton |    H     |     1 hrs      |      TBD      |     TBD     |
-| Set Up Screen Routing     |    H     |     2 hrs      |      TBD      |     TBD     |
-| Set Up Services and Auth  |    H     |     2 hrs      |      TBD      |     TBD     |
-| Basic Styling             |    H     |     2 hrs      |      TBD      |     TBD     |
-| Login/Register Working    |    H     |     2 hrs      |      TBD      |     TBD     |
-| Boards Screens Setup      |    H     |     3 hrs      |      TBD      |     TBD     |
-| Posts Screens Setup       |    H     |     3 hrs      |      TBD      |     TBD     |
-| Clean Up Styling          |    L     |     4 hrs      |      TBD      |     TBD     |
-| TOTAL                     |          |     28 hrs     |      TBD      |     TBD     |
+| Create React App          |    H     |     .5 hrs     |    .5 hrs     |   .5 hrs    |
+| Clean Up Boilerplate      |    H     |     .5 hrs     |    .5 hrs     |   .5 hrs    |
+| Create Component Skeleton |    H     |     1 hrs      |      1hr      |     1hr     |
+| Set Up Screen Routing     |    H     |     2 hrs      |     2hrs      |    2hrs     |
+| Set Up Services and Auth  |    H     |     2 hrs      |     3hrs      |    3hrs     |
+| Basic Styling             |    H     |     2 hrs      |     4hrs      |    4hrs     |
+| Login/Register Working    |    H     |     2 hrs      |      1hr      |     1hr     |
+| Boards Screens Setup      |    H     |     3 hrs      |     6hrs      |    6hrs     |
+| Posts Screens Setup       |    H     |     3 hrs      |     5hrs      |    5hrs     |
+| Clean Up Styling          |    L     |     4 hrs      |     5hrs      |    5hrs     |
+| TOTAL                     |          |     28 hrs     |     38hrs     |    38hrs    |
 
 <br>
 
@@ -185,4 +186,10 @@ src
 
 ## Code Showcase
 
+While it looks simple, I was proud to figure out how to create a post from a given board while passing props all the way from the services folder.
+
+`` const handlePostCreate = async (boardId, postData) => { const newPost = await addPost(boardId, postData); setBoards((prevState) => [...prevState, newPost]); history.push(`/boards/${boardId}/posts/`); }; ``
+
 ## Code Issues & Resolutions
+
+I originally designed my code so that when looking at all boards, each board's cover photo would be the image of the first post. When a new board was created with no posts, however, the app would throw errors since the board had no posts. I created a hotfix that shows the same picture as the cover photo for all boards. I plan on fixing this in the future.

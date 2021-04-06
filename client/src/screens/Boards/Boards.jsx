@@ -34,8 +34,8 @@ export default function Boards(props) {
             <div className="indiv-board-container" key={board.id}>
               <Link to={`/boards/${board.id}`}>
                 <p className="board-name">{board.name}</p>
-                <img className="board-image" alt="cover" src={defaultImage} />
-                {/* {!board.posts[0] ? (
+                {/* <img className="board-image" alt="cover" src={defaultImage} /> */}
+                {!board.posts[0] ? (
                   <img className="board-image" alt="cover" src={defaultImage} />
                 ) : (
                   <img
@@ -43,13 +43,13 @@ export default function Boards(props) {
                     src={board.posts[0].image_url}
                     alt="cover"
                   />
-                )} */}
+                )}
 
-                {/* {boards.posts.length && board.posts.length > 1 ? (
+                {boards.posts && board.posts.length > 1 ? (
                   <p>{board.posts.length} posts</p>
                 ) : (
                   <p>{board.posts.length} post</p>
-                )} */}
+                )}
               </Link>
             </div>
           ))}
