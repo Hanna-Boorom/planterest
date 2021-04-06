@@ -24,7 +24,7 @@ class BoardsController < ApplicationController
     @board.user = @current_user
 
     if @board.save
-      render json: @board, status: :created, location: @board
+      render json: @board, include: :posts,  status: :created
     else
       render json: @board.errors, status: :unprocessable_entity
     end
@@ -33,7 +33,7 @@ class BoardsController < ApplicationController
   # PATCH/PUT /boards/1
   def update
     if @board.update(board_params)
-      render json: @board
+      render json: @board, include: :posts
     else
       render json: @board.errors, status: :unprocessable_entity
     end
