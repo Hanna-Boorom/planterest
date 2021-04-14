@@ -44,7 +44,7 @@ export default function Boards(props) {
                   />
                 )}
 
-                {boards.posts && board.posts.length > 1 ? (
+                {board.posts && board.posts.length > 1 ? (
                   <p>{board.posts.length} posts</p>
                 ) : (
                   <p>{board.posts.length} post</p>
